@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="851f1d28-7c4d-48d1-b498-54264f311917" name="Interpreter" linkedPackageId="207bfce5-ce75-4ceb-a5da-db533c04070f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="13d0ef6c-f13a-44b0-8d20-7acd8a05e5c3">
+      <elementDefinition Id="dccfe1b2-f9fd-49e7-8480-97eaf7f6a149" />
+      <body>Terminal expression
+Interpret(context) calls 
+context-&gt;Translate(Data)</body>
+      <annotatedElements>
+        <classMoniker Id="e0165db1-3fbf-49dc-876b-567ac32a15a7" LastKnownName="Word" />
+      </annotatedElements>
+    </comment>
+    <comment Id="23b2306d-5641-4709-92f4-6be779c90933">
+      <elementDefinition Id="9ae006ce-4853-4393-bbfa-409ee2bd2d4f" />
+      <body>Nonterminal expression
+Interpret(context) for each expression calls expression-&gt;Interpret(context)</body>
+      <annotatedElements>
+        <classMoniker Id="aa64ac9c-db29-4afc-8cc1-8bc35183f514" LastKnownName="Sentence" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="8d2c58f2-c4aa-4465-8c0f-e1c9cf3178fc">
+      <profileInstance Id="27d4ac4f-da46-493c-a2e7-e4a1bfa726c2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4023f0a1-3c60-44d3-a0ee-7084b159583e">
+      <profileInstance Id="a12ca333-cd95-488d-a707-5c6df4af6a99" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5736c26a-8930-422e-a020-524911a6b0d4" name="Expression" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="240b4c88-0b6c-48ae-bf54-f9a8b7473c7e" />
+        <suppliersInternal>
+          <dependency Id="b2297fe3-0b39-4257-bb47-37718e2ba73f">
+            <classMoniker Id="fd18b0ff-fd2a-491d-81d3-fb6f7becd5d3" LastKnownName="Context" />
+            <elementDefinition Id="f0c92c1c-aa76-443a-8edf-b0af4f12567a" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="49975b3a-78bc-4a4b-a590-233d58d1fd90" name="Interpret" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="86b9feb5-09c9-43f8-a908-41432f129c2d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c2b3ec0-e98d-421e-abe4-21df336e0284" direction="Return" isUnique="false">
+                  <elementDefinition Id="dcb53fd3-e220-4686-9c63-ce2e2193a172" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b2a88fd5-28cd-4561-b4cf-9c0064de49e7" name="context" direction="In" isUnique="false">
+                  <elementDefinition Id="825f3dc0-9bec-4e8f-b4b8-006c8d8466a1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9e1d3fbf-a2d5-4607-9bd5-b84ab5e02d21" LastKnownName="Context" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9a99cb4f-a9da-48bd-806c-2867ce472502" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9e1d3fbf-a2d5-4607-9bd5-b84ab5e02d21" name="Context" isAbstract="false" isLeaf="false" cachedFullName="Context">
+        <elementDefinition Id="bacbabc8-cccb-4009-b7f5-6fc67a4e6b06" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0165db1-3fbf-49dc-876b-567ac32a15a7" name="Word" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="677d97b1-e3e8-4bfa-aa7e-6c5733af38cb" />
+        <generalsInternal>
+          <generalization Id="b2868fd9-ded4-487b-93d4-ea57fc860760" isSubstitutable="false">
+            <classMoniker Id="5736c26a-8930-422e-a020-524911a6b0d4" LastKnownName="Expression" />
+            <elementDefinition Id="78ef89bd-c992-4923-ac5b-744a423dc165" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="a1663d9b-9227-4113-b114-02b78ce62de2" name="Data" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eabe8b08-3039-4efe-893e-fc5e72429f2d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b2eafad4-696a-4de1-b961-02f2dcf3ad77" name="Interpret" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9ad3ef41-7963-4179-a891-29fe0e6b5541" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="82b132cf-8900-427c-bfc0-ed618db7ab1c" name="context" direction="In" isUnique="false">
+                  <elementDefinition Id="3c436c0a-30ba-458e-99a4-602b03a9b278" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9e1d3fbf-a2d5-4607-9bd5-b84ab5e02d21" LastKnownName="Context" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f24085db-9374-45f7-9819-ba113b1732e1" direction="Return" isUnique="false">
+                  <elementDefinition Id="4e91a4ba-7143-46a2-b102-bced9fc22b17" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="aa64ac9c-db29-4afc-8cc1-8bc35183f514" name="Sentence" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2fee31bd-f940-4e0a-8935-b91ca6f6027f" />
+        <generalsInternal>
+          <generalization Id="c2290674-f431-4ed4-95ae-bb6308f819d7" isSubstitutable="false">
+            <classMoniker Id="5736c26a-8930-422e-a020-524911a6b0d4" LastKnownName="Expression" />
+            <elementDefinition Id="87f0ab7f-c5ca-4793-82a2-7fead2358f19" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="487e6ceb-d55d-48c6-972c-308835522943" isDerived="false" sourceEndRoleName="Sentence" targetEndRoleName="Expression" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5736c26a-8930-422e-a020-524911a6b0d4" LastKnownName="Expression" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57790802-c165-4679-902d-9b53aa5fb2c1" name="Sentence" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c58753c1-ddb8-4c29-a976-42dbe097b2cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3db4cd82-d5b2-4113-8957-403f43848ab3" name="Expression" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="4f632db0-b6bd-4377-a172-0ea431ca6438" name="Lower" value="*">
+                      <elementDefinition Id="5e41a3f6-5573-4db1-bd26-a4d3f705d859" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="430227a0-dd97-4430-b988-24523edab09e" name="Upper" value="*">
+                      <elementDefinition Id="29e756cb-7e6c-4c51-8079-a2ade35572c1" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c3a7922d-589c-4905-9444-378d117fa2fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="27a594f6-ec4d-4c68-ac0e-2bc0b77c5702" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="e8b19969-ed77-4299-aa42-dfbe1690bfc5" name="Expressions" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0e8f8451-b4a0-4519-b589-a5c1f0d63b1f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="19716a9c-0793-4b1b-ba8b-f3666d5589b6" LastKnownName="List&lt;Expression&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="775e302e-65f3-4ee4-ba9f-692f10a1a1c9" name="Interpret" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="adb8a8c7-e891-45f6-82af-5bc739968ca1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4998c1d6-1b57-4edf-aa7c-d023954b0835" name="context" direction="In" isUnique="false">
+                  <elementDefinition Id="2fc36776-d0d8-4ca9-b1ea-dc1ba204834e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9e1d3fbf-a2d5-4607-9bd5-b84ab5e02d21" LastKnownName="Context" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ad7ba18d-0239-45f0-b4ec-0d416e1e5da5" direction="Return" isUnique="false">
+                  <elementDefinition Id="53c1e46b-a3c5-4462-8376-fae140bff8fa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fd18b0ff-fd2a-491d-81d3-fb6f7becd5d3" name="Context" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="696309d4-1e4e-4f6a-8f40-3064619d2db6" />
+        <ownedOperationsInternal>
+          <operation Id="c9a2599d-00d4-4211-9ef0-d0394c132282" name="Translate" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="efc93c36-c395-4d1b-a46f-d596a550604e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="caeb8979-097b-4ab8-85b0-9d7a45c0edfe" name="word" direction="In" isUnique="false">
+                  <elementDefinition Id="cb9e5151-d674-4d04-bc71-9ce999c27e64" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4bffc011-f8a9-47db-be31-2b4699f556ef" direction="Return" isUnique="false">
+                  <elementDefinition Id="ddbd8d6e-1a87-43f2-8d90-ffb5c6b8f08d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="706f9470-3034-4bf7-a7b5-20ba649f5fd1" name="EnRuContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fcad583d-c290-4054-a7cf-7dd7ac4b3471" />
+        <generalsInternal>
+          <generalization Id="8e86b482-ddca-4074-a38d-83f0e416cdba" isSubstitutable="false">
+            <classMoniker Id="fd18b0ff-fd2a-491d-81d3-fb6f7becd5d3" LastKnownName="Context" />
+            <elementDefinition Id="33b317c9-3c36-4ad1-9af7-034fa73f360d" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="5fed4d43-908f-4b93-b463-6270f5b48b31" name="Vocabulary" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="92cf4f6a-1ad8-4ce5-bfd6-6e9d2b0fa898" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e668e94c-1e39-4f40-b848-0a1cb02ae4a6" LastKnownName="Dictionary&lt;string, string&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="cf149e49-6df4-4264-8bef-c69319810e14" name="Translate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbb7e45d-ab60-44b3-b301-eae230bb8a19" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4d8890be-8f6c-4b96-bf0d-b6dfc3c4388a" name="word" direction="In" isUnique="false">
+                  <elementDefinition Id="5da01f5e-8f43-4b19-9f1f-00ac6126cbf0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f594e7ce-ab6b-40b0-a506-05be84d30241" direction="Return" isUnique="false">
+                  <elementDefinition Id="f4dc59dc-9f5b-4efa-a04f-b6a6b4b79d17" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9a99cb4f-a9da-48bd-806c-2867ce472502" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e668e94c-1e39-4f40-b848-0a1cb02ae4a6" name="Dictionary&lt;string, string&gt;" isAbstract="false" isLeaf="false" cachedFullName="Dictionary&lt;string, string&gt;">
+        <elementDefinition Id="647caa08-05bd-474f-b780-945b7fe70d52" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="19716a9c-0793-4b1b-ba8b-f3666d5589b6" name="List&lt;Expression&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Expression&gt;">
+        <elementDefinition Id="4d8e89ad-91ba-4d98-930a-51bc5b5fe34b" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="207bfce5-ce75-4ceb-a5da-db533c04070f" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

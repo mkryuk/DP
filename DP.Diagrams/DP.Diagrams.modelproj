@@ -36,6 +36,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\Command.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\Interpreter.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\Interpreter.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\Interpreter.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>

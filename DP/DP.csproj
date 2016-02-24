@@ -56,6 +56,12 @@
     <Compile Include="Behavioral\Command\CoffeeMachine.cs" />
     <Compile Include="Behavioral\Command\ICommand.cs" />
     <Compile Include="Behavioral\Command\UsingCommand.cs" />
+    <Compile Include="Behavioral\Interpreter\Context.cs" />
+    <Compile Include="Behavioral\Interpreter\EnRuContext.cs" />
+    <Compile Include="Behavioral\Interpreter\Expression.cs" />
+    <Compile Include="Behavioral\Interpreter\Sentence.cs" />
+    <Compile Include="Behavioral\Interpreter\UsingInterpreter.cs" />
+    <Compile Include="Behavioral\Interpreter\Word.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />
