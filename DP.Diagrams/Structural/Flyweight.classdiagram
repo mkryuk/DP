@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1ec7d6a7-4601-499a-915a-80c086d073b8" name="Flyweight" linkedPackageId="d7b480c7-c0d1-4fb9-b560-dadcfd7b194f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="34b1696a-a675-49d4-90d2-bd229410ab48">
+      <elementDefinition Id="4101bcd0-eaf6-4f6a-bad8-5ee1d2063d74" />
+      <body>Uses Flyweight to load Picture</body>
+      <annotatedElements>
+        <classMoniker Id="095f5897-c085-4687-ba9b-19c2e4912e39" LastKnownName="Gnome" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="28146025-12a3-4d0e-8db6-eee8258d0b2b">
+      <profileInstance Id="bd8f0424-94a9-467e-b824-075d2fd414f9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="203b1887-411f-4fb6-ac94-31fc7012f086">
+      <profileInstance Id="7b3a355a-3540-4c69-806c-f8afbb051d41" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d5c9312c-720c-47ad-acc7-f50b73c14e07" name="Unit" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9567f65c-b28b-4661-96b0-f3c3de70cd48" />
+        <ownedAttributesInternal>
+          <property Id="41fb1288-f580-4af8-8950-83b77a900fd3" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0075600-a5b1-49ce-a0fa-6bca0090d712" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="623d1c66-7e90-4230-a7fa-49a76db1315b" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="5d1d3d97-b89f-4d1b-977f-eca9802147c0" name="Picture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eb0bd20c-2057-4865-8d05-5b54b038aa89" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b31b322b-4c79-48a3-a717-5dd4910aeb67" LastKnownName="Image" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="623d1c66-7e90-4230-a7fa-49a76db1315b" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b31b322b-4c79-48a3-a717-5dd4910aeb67" name="Image" isAbstract="false" isLeaf="false" cachedFullName="Image">
+        <elementDefinition Id="24829cd7-fa7b-4065-839f-3a44a35ad52b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="095f5897-c085-4687-ba9b-19c2e4912e39" name="Gnome" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="18494193-b24f-4708-b1ce-9474fbd0d47b" />
+        <suppliersInternal>
+          <dependency Id="8b83c43d-4237-4c58-b589-b5f0a3db9441">
+            <classMoniker Id="e77ceadc-212f-449a-95b1-d042f6c219f6" LastKnownName="Flyweight" />
+            <elementDefinition Id="0bfef247-7554-4931-a314-9b5d7279593a" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="37404a75-56e9-4cf5-8c8b-b1a5d13ac953" isSubstitutable="false">
+            <classMoniker Id="d5c9312c-720c-47ad-acc7-f50b73c14e07" LastKnownName="Unit" />
+            <elementDefinition Id="91f5f98c-fac5-41f9-8390-4f8f4530ad08" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9f078ab8-478e-422c-97a2-ae9086492706" name="Ork" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="faf610f0-e62c-4115-9b33-8416853c432b" />
+        <suppliersInternal>
+          <dependency Id="4e200ff2-ecc9-4728-a426-c00157b43b88">
+            <classMoniker Id="e77ceadc-212f-449a-95b1-d042f6c219f6" LastKnownName="Flyweight" />
+            <elementDefinition Id="a10dfe27-bd83-444d-8d3f-652bebf31ce4" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="ec0d58ae-b3e7-42cb-8536-945a4b82b981" isSubstitutable="false">
+            <classMoniker Id="d5c9312c-720c-47ad-acc7-f50b73c14e07" LastKnownName="Unit" />
+            <elementDefinition Id="5bbd4084-6629-4de6-b63d-69ba6143b50a" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e77ceadc-212f-449a-95b1-d042f6c219f6" name="Flyweight" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="24986b15-50f3-4a96-9f1f-c47ff20856c3" />
+        <ownedOperationsInternal>
+          <operation Id="e6c277f3-e299-42f9-9b4d-ab095ccdb1a5" name="LoadOrkImage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="31d72f27-e006-4e91-bbba-db61f13584c5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b27899c4-0696-4eb7-a4b7-004561b7afd5" direction="Return" isUnique="false">
+                  <elementDefinition Id="9169a43b-18ef-4e8a-80a8-981803010d36" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b31b322b-4c79-48a3-a717-5dd4910aeb67" LastKnownName="Image" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="91badf4a-19c9-410d-85b3-60b32a0e5a5d" name="LoadGnomeImage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4cd2a724-1b7c-4609-a904-771d2017c4cf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="691c734d-7015-4141-84a0-b492955ce126" direction="Return" isUnique="false">
+                  <elementDefinition Id="1b673ca1-34f4-4a6b-a1f3-7e86fc815f2e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b31b322b-4c79-48a3-a717-5dd4910aeb67" LastKnownName="Image" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6175ddca-15d6-4f87-b56e-8b51b825e106" name="JpegFlyweight" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d9573007-cb02-4cf6-b895-1c9cd8ee7811" />
+        <generalsInternal>
+          <generalization Id="10853e4a-0e46-4f83-929e-edb6c35bd0fd" isSubstitutable="false">
+            <classMoniker Id="e77ceadc-212f-449a-95b1-d042f6c219f6" LastKnownName="Flyweight" />
+            <elementDefinition Id="defff217-d445-4dd9-b42e-6b59684c0da4" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="dd1c686a-c765-48e3-a993-626c3ca3b29e" isDerived="false" sourceEndRoleName="JpegFlyweight" targetEndRoleName="Image" isLeaf="false" isAbstract="false">
+            <classMoniker Id="88e1ee5b-274b-4546-b611-5120469197ab" LastKnownName="Image" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d4f079ba-59f5-4212-9fab-5103ead772cd" name="JpegFlyweight" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="71de9c72-1bd3-433f-b508-1f87c0d80e97" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9ba5d51-4b34-41cc-8072-4fa6c95aba6b" name="Image" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="05cd995d-bd7a-49b9-bbd6-9ca015a057a0" name="Lower" value="*">
+                      <elementDefinition Id="7b21b75d-66df-4ad5-9466-aef43d42b865" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="050a5325-dcb1-4ee9-a8c0-e0319232d391" name="Upper" value="*">
+                      <elementDefinition Id="ac9c4f8d-99c1-440a-a09d-1d13b6324241" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="631714f4-31bd-4baf-a0dd-c3a651b0b00d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="40a0afd0-e7c2-4216-acb3-6bde9f962a1a" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="8ab8cc7e-06e5-4a79-88f2-d069e0d57c74" name="LoadOrkImage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="25da518d-f0db-44e6-9627-89e36655004c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="789d6125-aa99-4e98-acc2-bedb2dff55bb" direction="Return" isUnique="false">
+                  <elementDefinition Id="ae93b86a-9791-4a5a-9bdb-b6ff4335b036" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b31b322b-4c79-48a3-a717-5dd4910aeb67" LastKnownName="Image" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1c27ce7d-7796-4a1a-adb8-eabb8731f61d" name="LoadGnomeImage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c89f1216-f50c-4409-9009-1821235b753a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6fda4ea9-4c69-4dce-bcd1-646d1b4cea4b" direction="Return" isUnique="false">
+                  <elementDefinition Id="2841c1dd-b993-49c4-a6c5-dad153242bc2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b31b322b-4c79-48a3-a717-5dd4910aeb67" LastKnownName="Image" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="88e1ee5b-274b-4546-b611-5120469197ab" name="Image" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f1e9e5fc-e89c-40fd-9dc5-99c79e046b63" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d7b480c7-c0d1-4fb9-b560-dadcfd7b194f" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

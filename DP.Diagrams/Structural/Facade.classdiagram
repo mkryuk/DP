@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="56ae4b0e-bc9a-4cad-9b3e-47ec77a5b991" name="Facade" linkedPackageId="835d1c40-5c8b-4ec8-815b-868c59417929" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="7c4370e0-13ef-4003-b2df-e40c75450460">
+      <elementDefinition Id="d2df536a-a5fc-47a9-bc27-2feef677cbec" />
+      <body>HaveANiceLife() hides all the hard work</body>
+      <annotatedElements>
+        <classMoniker Id="d69741d1-4e4e-43f6-812e-a379da287b0b" LastKnownName="Facade" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="c93a45fe-cf86-4c57-a9d8-dc6c9bc2072d">
+      <profileInstance Id="cf3314d9-ea82-4760-b964-0479543d884a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="71aa57bb-a862-461a-ae09-345db97a17b0">
+      <profileInstance Id="344393ec-f2be-4113-9eba-91e8d1435b89" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="cbbaa060-8063-4b67-a0e9-af89c6579f79" name="Client">
+        <elementDefinition Id="7744487c-938f-4d29-97f8-cb9a5e8b5869" />
+        <suppliersInternal>
+          <dependency Id="4446633c-0d9c-4f2a-9bdd-86595cb3446b">
+            <classMoniker Id="d69741d1-4e4e-43f6-812e-a379da287b0b" LastKnownName="Facade" />
+            <elementDefinition Id="b120bc1c-d18c-4d8c-9a78-07da72848bcc" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="67ce6a7f-111f-47a2-808f-a3d59386ddc9" name="Facade">
+        <elementDefinition Id="f6b69d94-b502-4370-b9ed-410e1a457dac" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="0fdc55c9-6a7f-4061-9ecb-f76b0fa585d5" name="Tree" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="69c009dc-acd5-445f-a582-f749c9c435d4" />
+              <ownedOperationsInternal>
+                <operation Id="cc96c322-49d4-40a3-bcd2-04e5eea21fae" name="Grow" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3fdaf501-eb83-4dd6-b43a-954881a08d02" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="6494da33-d9a4-4a20-8841-a62db36fecd8" name="Son" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="9f97a276-8fea-499b-ade7-dbff33dee63d" />
+              <ownedOperationsInternal>
+                <operation Id="b7a81206-d065-4499-b3c7-c443b8f13621" name="Foster" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3513d8cb-9c30-4583-a8c7-ee8f9cdf758b" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="39bbf171-b3f3-4e2c-93fd-450f85623460" name="House" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="45ef8b4e-e8f7-46d8-8797-6e97b45b77c7" />
+              <ownedOperationsInternal>
+                <operation Id="4a07c9a6-e43c-46c6-8988-5f0c205ed634" name="Build" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="73a55de3-367b-4a40-9070-ea33cbfb6ca2" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="d69741d1-4e4e-43f6-812e-a379da287b0b" name="Facade" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="082cdf41-1909-4099-aec5-820db80f61c3" />
+              <suppliersInternal>
+                <dependency Id="36b90015-0157-401a-8bb7-0b67952bfec6">
+                  <classMoniker Id="0fdc55c9-6a7f-4061-9ecb-f76b0fa585d5" LastKnownName="Tree" />
+                  <elementDefinition Id="b96eae10-99ca-43f3-b04a-312ec1f3b1d2" />
+                </dependency>
+                <dependency Id="37089fc3-2d66-4015-9eff-382be59812b4">
+                  <classMoniker Id="39bbf171-b3f3-4e2c-93fd-450f85623460" LastKnownName="House" />
+                  <elementDefinition Id="12fa10ed-b713-423b-a95f-b60fe8093523" />
+                </dependency>
+                <dependency Id="21045865-0505-4423-85e4-400bccc3ee73">
+                  <classMoniker Id="6494da33-d9a4-4a20-8841-a62db36fecd8" LastKnownName="Son" />
+                  <elementDefinition Id="34800233-c1fc-43ac-9354-1d0888ddfe42" />
+                </dependency>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="cfc26d3b-20b0-4f50-9fe8-21ede3b5cf13" name="HaveANiceLife" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="1dbf0003-2346-46bc-97c7-40344b725b54" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="835d1c40-5c8b-4ec8-815b-868c59417929" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

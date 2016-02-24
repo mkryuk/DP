@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="bcc6e350-9aeb-4030-9ec1-a8ddc746c497" name="Proxy" linkedPackageId="cf2e0b9b-1324-4dbb-b337-4ac527bb1fa9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="39ff9fff-4488-495d-8969-69227872fd1e">
+      <elementDefinition Id="54f1413e-286a-4e2f-9e93-05f8f761b772" />
+      <body>proxying queries to real server</body>
+      <annotatedElements>
+        <classMoniker Id="9f594b33-f360-4fb1-97f1-03097f024c7b" LastKnownName="WebProxy" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="43683a65-4ab4-4a6f-bef4-f6137b4e1644">
+      <profileInstance Id="eb6fcc30-a476-43a9-8047-4fe7b26f5338" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3e4c8e4a-f6e3-472e-b67c-77ac5c8ceed5">
+      <profileInstance Id="c19d106c-67ce-4ccb-8731-c447a36222cf" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2e024e44-27ca-4259-983c-53bca232879d" name="WebServer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b3976cd0-328e-40d6-8ab4-52cdf6a43012" />
+        <suppliersInternal>
+          <interfaceRealization Id="4d4decd7-ed2e-4dd3-a595-fdda1702a3d8">
+            <interfaceMoniker Id="cfe58a04-8875-4587-914a-638915f4b23d" LastKnownName="IWeb" />
+            <elementDefinition Id="afe408e1-ea74-40d4-b083-b1443848e6d5" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="ef2b358c-9ac0-4e16-8c62-b76c6d6c263a" name="Get" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cdb7d8d8-84c3-4ab7-9474-96116ed30986" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="18c57fc5-ab04-4c69-a629-e9cb67db45a4" name="string url" direction="In" isUnique="false">
+                  <elementDefinition Id="969b25a9-a334-44b7-bc3f-2e61e54485b4" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="da927fd4-3174-45af-becf-a12c5222c9ce" direction="Return" isUnique="false">
+                  <elementDefinition Id="f2e94ab8-26ee-49c6-a255-9a876e20bb3b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="181dad73-6151-4737-90d1-b01242d9c09f" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6a74ee00-036a-4ff4-8cb3-9ea793e72cff" name="Post" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5e1b10d4-127d-4dbc-80e8-c47841771fc5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8f599a7d-8f54-4d2e-b022-195c12d980e3" name="string url" direction="In" isUnique="false">
+                  <elementDefinition Id="e0c38e54-76fb-4e62-8a03-b6b1445df841" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="20b14c00-4746-4710-b272-96571bec4a95" name="string data" direction="In" isUnique="false">
+                  <elementDefinition Id="037da184-d091-468f-ae19-bcb6562eaf8b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="cfe58a04-8875-4587-914a-638915f4b23d" name="IWeb" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="702ae23e-98a7-4835-8464-2444fcb486ee" />
+        <ownedOperations>
+          <operation Id="433bb352-48d7-44ed-8cd9-0f6ddcf9128a" name="Get" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="787f4406-93f9-4e47-99a2-47163b10552f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0c2e4a1d-abbd-400a-b2a5-31d7d822588e" name="string url" direction="In" isUnique="false">
+                  <elementDefinition Id="c6c0d06e-ecce-4679-8dba-a8d952814376" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="86dc2fc2-487f-4f98-be0d-670036bb05a7" direction="Return" isUnique="false">
+                  <elementDefinition Id="f9d11b15-4822-421e-91bf-539094800580" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="181dad73-6151-4737-90d1-b01242d9c09f" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="23d5fb43-c80a-4f75-be8e-e48f94002822" name="Post" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="331b27e7-472f-4bcc-bb82-684fb44e78ab" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="666928d4-8171-4458-adb4-9468901ea31d" name="string url" direction="In" isUnique="false">
+                  <elementDefinition Id="b09a2ade-935a-4032-ad2c-36e5e7912da5" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="769cec98-fc77-405e-97d5-6c75793f0bc3" name="string data" direction="In" isUnique="false">
+                  <elementDefinition Id="1e1abfc4-a689-410b-bc7e-fb17f419cf84" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="181dad73-6151-4737-90d1-b01242d9c09f" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9f594b33-f360-4fb1-97f1-03097f024c7b" name="WebProxy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cd90c652-5e97-4cb9-afc5-d6994cf7851a" />
+        <suppliersInternal>
+          <interfaceRealization Id="1d916685-1446-4528-9a1c-141867b00ce6">
+            <interfaceMoniker Id="cfe58a04-8875-4587-914a-638915f4b23d" LastKnownName="IWeb" />
+            <elementDefinition Id="cffcfdbd-b53b-4f63-9a87-d5ca80434306" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="7501bfbf-7fda-4ada-a067-2c101aa9450c" isDerived="false" sourceEndRoleName="WebProxy" targetEndRoleName="WebServer" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2e024e44-27ca-4259-983c-53bca232879d" LastKnownName="WebServer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1783a43d-48df-4284-bb99-6e520eb2de4d" name="WebProxy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="87b01a72-cf44-4aa2-a293-1280d1cdce2a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ae424f3-2dd1-483d-a8e3-59560bcf8fc8" name="WebServer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f7a40ed7-3f5c-422f-a7d5-2f03774654fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="213f5555-bb0c-49ca-8efc-04fbb6aaa5a8" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="c6b6df91-e6c1-40b7-9c53-697307998c9d" name="Get" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb06c1d8-4223-43d0-9b75-3c0b7c4c9627" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="23410308-799b-427d-aca7-a2b48052b4d1" name="string url" direction="In" isUnique="false">
+                  <elementDefinition Id="0c524ef5-574d-4db5-bf6f-4263bfed0e93" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08dc29bd-bcf2-40c1-a2f3-a00515994d2e" direction="Return" isUnique="false">
+                  <elementDefinition Id="457fc1d2-aebf-4df7-8144-96919b61203f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="181dad73-6151-4737-90d1-b01242d9c09f" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="37ddfe21-a064-41aa-b21e-a0139473452a" name="Post" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1fc6a9d7-f556-4b7d-8ec2-d254f231b557" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bbfb7093-f389-479b-84b0-166c84c65be2" name="string url" direction="In" isUnique="false">
+                  <elementDefinition Id="00273cc4-5afc-4b73-8309-fa377f2d5d09" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2cf2428f-7f9a-402c-900a-3fdbedb27b6e" name="string data" direction="In" isUnique="false">
+                  <elementDefinition Id="e3c7070a-e805-4b29-a427-87e0c2365541" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c782b026-d38a-4883-9730-aaa219c92e67" name="Client">
+        <elementDefinition Id="d0036bab-b52b-4447-b6f4-0c6a18878f41" />
+        <suppliersInternal>
+          <dependency Id="94609c7e-f6ff-43fc-b374-a8de99d0a85e">
+            <interfaceMoniker Id="cfe58a04-8875-4587-914a-638915f4b23d" LastKnownName="IWeb" />
+            <elementDefinition Id="e53fc72c-9139-4b74-a68a-7a48e41a10fe" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="cf2e0b9b-1324-4dbb-b337-4ac527bb1fa9" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

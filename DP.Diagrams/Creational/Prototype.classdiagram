@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="07de6148-7af9-4935-bef2-b40d4edfac29" name="Prototype" linkedPackageId="ecec0eb4-3a43-44aa-aa76-8432eda90134" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="0f2b0d1a-2108-4b78-ad73-482cedb0cf30">
+      <elementDefinition Id="378c9cc8-720b-4e82-80b9-2fc4470d1ab8" />
+      <body>Return copy of this</body>
+      <annotatedElements>
+        <classMoniker Id="d28d2801-a093-4247-b332-d712e1612669" LastKnownName="ComplexType" />
+      </annotatedElements>
+    </comment>
+    <comment Id="bac566a7-b294-4a17-80a9-3ce01deb2f34">
+      <elementDefinition Id="86238122-5629-4359-ad3c-9b3a7ddb65b1" />
+      <body>p = prototype.Clone();</body>
+      <annotatedElements>
+        <classMoniker Id="df01822c-595c-4068-ade0-cb1809b63443" LastKnownName="Prototype" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="5e0652a5-b89b-4cd5-9f72-b6f05c09376a">
+      <profileInstance Id="431f3f41-0278-4227-98fe-0f5e6949381c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0da4c097-1764-459e-9d13-9587ff3c412f">
+      <profileInstance Id="9461979e-08f4-4e0c-a084-cc454ccf0b65" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="df01822c-595c-4068-ade0-cb1809b63443" name="Prototype" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0c6aa736-2eb9-400d-8ba7-c080e58dba2b" />
+        <ownedOperationsInternal>
+          <operation Id="db9154a4-87be-449c-88a0-d30867d23a88" name="Clone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="de222cf1-b0a9-4d5b-81aa-a86c7094b276" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="11611fdd-38be-4793-aa2f-7600c60932dc" direction="Return" isUnique="false">
+                  <elementDefinition Id="e6e87aa8-0d13-4c5e-8e97-9bfd28981897" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2c556c4a-a395-4d9d-bc35-306f540b254b" LastKnownName="Prototype" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2c556c4a-a395-4d9d-bc35-306f540b254b" name="Prototype" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::Prototype">
+        <elementDefinition Id="0c6aa736-2eb9-400d-8ba7-c080e58dba2b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d28d2801-a093-4247-b332-d712e1612669" name="ComplexType" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5019983a-3e87-4fae-b33d-dee5c8e16a65" />
+        <generalsInternal>
+          <generalization Id="5c76eed8-f328-4a65-9da9-c188d8af60f2" isSubstitutable="false">
+            <classMoniker Id="df01822c-595c-4068-ade0-cb1809b63443" LastKnownName="Prototype" />
+            <elementDefinition Id="6cc46007-9ba7-45c2-81b8-bfd984f5da94" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="443655cc-92de-4805-bdc6-a4da7289ded9" name="Clone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="01657e7b-148d-4adc-b2ce-d67550b652fb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6feec8e5-a45f-4ef4-9e6a-683f96323ca5" direction="Return" isUnique="false">
+                  <elementDefinition Id="4306aa4f-a227-495d-b046-d1e4fafba225" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2c556c4a-a395-4d9d-bc35-306f540b254b" LastKnownName="Prototype" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="a1d9a31e-71c7-4d24-813e-299658461642" name="Client">
+        <elementDefinition Id="56062ad9-c025-41f5-978d-dc713b952b82" />
+        <suppliersInternal>
+          <dependency Id="19368bc6-c3c8-4f3e-aa6d-8419d3543f3b">
+            <classMoniker Id="df01822c-595c-4068-ade0-cb1809b63443" LastKnownName="Prototype" />
+            <elementDefinition Id="f9b9cbaf-8190-4018-900f-3df16aeee6c7" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="ecec0eb4-3a43-44aa-aa76-8432eda90134" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

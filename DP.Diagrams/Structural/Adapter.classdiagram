@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="024adc7e-f9ae-42e9-b94b-18b9cc95ff57" name="Adapter" linkedPackageId="3a5fe0f7-012e-42e1-81f6-0f803ffe2835" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="54dcd251-255c-4b87-b3f7-8560be820efe">
+      <elementDefinition Id="8995cef4-d379-4738-86f7-13413a62246b" />
+      <body>Request() -&gt; SpecificRequest()</body>
+      <annotatedElements>
+        <classMoniker Id="fdc5e13a-3b6b-4227-ad02-51c0673ba385" LastKnownName="Adapter" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="95fbd71b-09ea-4f08-b73e-d940e91e4694" name="IDatabase" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="59a7983a-469f-4598-a4c9-b4200bd031e4" />
+        <ownedOperations>
+          <operation Id="bf8e3730-34a2-4912-8fc9-118b1841654f" name="Request" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ce93411e-d780-4f6a-884c-053b8a9550dd" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1fb46880-3480-434c-8334-c0ddf34b824e" name="SpecificDatabase" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f4427a7-0349-4025-a062-4b6a0af79943" />
+        <ownedOperationsInternal>
+          <operation Id="a23b8538-9464-403b-98de-12f228a3ccb4" name="SpecificRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6fc68cc8-e8ed-4990-a548-e14dd117228e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fdc5e13a-3b6b-4227-ad02-51c0673ba385" name="Adapter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9ef5032a-c31a-4289-9b26-32384fa6a70d" />
+        <suppliersInternal>
+          <interfaceRealization Id="cf210a69-f77f-4412-8e88-0b39317beee0">
+            <interfaceMoniker Id="95fbd71b-09ea-4f08-b73e-d940e91e4694" LastKnownName="IDatabase" />
+            <elementDefinition Id="b1fd075a-b76c-43b7-92e1-464d8fada582" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="35ca9ae1-8487-448f-b775-82e56ee649e9" isDerived="false" sourceEndRoleName="Adapter" targetEndRoleName="SpecificDatabase" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1fb46880-3480-434c-8334-c0ddf34b824e" LastKnownName="SpecificDatabase" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6f87985-1b5a-469b-ba16-e4d5c8a09ac2" name="Adapter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d98ef360-b58f-474c-bd01-4fcd30434ddd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dcc53299-000e-47e6-a907-b1e04cb6888e" name="SpecificDatabase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8e775b1f-32c7-44fe-9564-ade53c54d92c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="26f4d22e-345a-4c1e-b214-bb2b6c32b32b" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0b125dad-214f-4434-8823-e53a4d24ec8a" name="_adaptee" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bb6a2d6b-9ff0-4e8f-b4f1-82804ee4b689" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="441f9153-5efc-4481-97bc-c7ac088171dc" LastKnownName="SpecificDatabase" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c718df8d-9e45-4c1b-9df6-692321eba23e" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0b744695-308a-44ce-9ab9-49711187857f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="86c5a0f4-9734-422a-a0d4-a72cfd3aad87" name="ClientCode">
+        <elementDefinition Id="a52999f3-e2e1-4564-a84b-5e5ecdbb9c0a" />
+        <suppliersInternal>
+          <dependency Id="bc6bfbe8-69c2-4e90-b33a-202517d99b65">
+            <interfaceMoniker Id="95fbd71b-09ea-4f08-b73e-d940e91e4694" LastKnownName="IDatabase" />
+            <elementDefinition Id="0a74c19f-4192-4fb4-ab2a-8e11908fa12a" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="441f9153-5efc-4481-97bc-c7ac088171dc" name="SpecificDatabase" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::SpecificDatabase">
+        <elementDefinition Id="1f4427a7-0349-4025-a062-4b6a0af79943" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="3a5fe0f7-012e-42e1-81f6-0f803ffe2835" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a9f5ce10-41a0-4277-a860-90b561fc05e0">
+        <profileInstance Id="8aa27a79-3e9d-4912-8873-0201f5bbcc8d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c3261f50-aa50-409b-84e9-7d689df364fb">
+        <profileInstance Id="7ce71a25-64f0-4955-95a0-df674e56a5d2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2aab3460-80a8-4eff-aef4-5ddadf45b701" name="Bridge" linkedPackageId="72ec4817-8316-4098-be76-bb2e1d8c6564" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="abd7f322-9dcc-46a9-9ef2-c3032e7a6ee3">
+      <elementDefinition Id="148ed622-e8a3-489e-921e-3ec980fba854" />
+      <body>Build() calls Implementor.BuildArmor()</body>
+      <annotatedElements>
+        <classMoniker Id="ca449867-88f3-43d9-b7f0-add4300b9b35" LastKnownName="Abstraction" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="2af6be64-1a16-406d-a52a-9bcadb7e58ed">
+      <profileInstance Id="b2b2fadd-3635-4e28-a2ae-ad4b86afc02e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="24c6c976-9552-4238-9790-b5bc444fad6e">
+      <profileInstance Id="36c48c61-d2e7-4cd3-a93f-8841245efa53" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f4a45991-740c-4839-9fff-3d247bacfca5" name="IImplementor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cd48d407-a734-4d7b-9d35-7abeb85399c6" />
+        <ownedOperations>
+          <operation Id="fa677797-3c49-4a9b-bace-44edb67988d3" name="BuildArmor" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7346f91e-9658-4400-bf33-c6ee07a31d60" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2aa17dcd-9f39-4cd2-831b-649d2cdde31f" name="AdamantArmorBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c9f2b564-6ee0-43b2-8b3f-6b2094ed1ded" />
+        <suppliersInternal>
+          <interfaceRealization Id="9c815df8-8e5d-4b5d-a73c-aa725a32e077">
+            <interfaceMoniker Id="f4a45991-740c-4839-9fff-3d247bacfca5" LastKnownName="IImplementor" />
+            <elementDefinition Id="d675d4d0-48cc-4723-8337-f44d3a9c245d" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="80770d63-882d-4194-be5a-043d01da737b" name="BuildArmor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b1a47b93-e95b-433e-b1b8-63407ad93703" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c7ceee3c-9338-4f03-8a0f-eebb5b13cc20" name="SteelArmorBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="13e631ad-9073-4f30-8941-8aa1872d953e" />
+        <suppliersInternal>
+          <interfaceRealization Id="a019a5f3-fef0-4c82-819f-357c3b3c2bf6">
+            <interfaceMoniker Id="f4a45991-740c-4839-9fff-3d247bacfca5" LastKnownName="IImplementor" />
+            <elementDefinition Id="4bfa5464-371c-401b-a158-b9cd5b3589aa" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a6ca463e-3b06-4eed-9317-40e1cb920d30" name="BuildArmor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed27e046-5ab2-466d-95b3-d0508c9ffa45" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ca449867-88f3-43d9-b7f0-add4300b9b35" name="Abstraction" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9392602e-91ef-45a0-9203-4e747a45b84a" />
+        <targetEnds>
+          <association Id="f0b26045-d64c-4b2d-b2ed-e5147709e0bf" isDerived="false" sourceEndRoleName="Abstraction" targetEndRoleName="IImplementor" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="f4a45991-740c-4839-9fff-3d247bacfca5" LastKnownName="IImplementor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a1638d3b-bbed-4836-95c3-574341553b71" name="Abstraction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d9f0d642-eb40-4d28-85a5-05b8864b9d6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ae0f233b-913d-4aeb-9184-186742553f4d" name="IImplementor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="efe3a1f6-917e-4773-8c2f-0ee6e1db6bb6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="db8b7972-cdb6-4c3c-9769-60acac0917cb" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="eb572752-fea2-45c8-a0fc-2fda539d99b4" name="Implementor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a417241b-89ed-489d-a1c1-2c45bb55e9a1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0f9c9357-baaf-4d91-90c4-24dd6348348f" LastKnownName="IImplementor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="06f888e7-8b3e-4f88-8d57-865f55fb8bd3" name="Build" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f2eaf52f-1df6-4da5-b677-2e5fc28324e5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e18d68c9-eb89-45ed-a5c6-282b5648b37b" name="AdamantArmorBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="acb244f2-3c08-4212-9da7-5d8195c31e2a" />
+        <generalsInternal>
+          <generalization Id="3f9691f7-b93a-4396-aaf5-a5a57b0b4aae" isSubstitutable="false">
+            <classMoniker Id="ca449867-88f3-43d9-b7f0-add4300b9b35" LastKnownName="Abstraction" />
+            <elementDefinition Id="1d66c2e8-dd03-4de0-bd8c-41b4938db19b" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="fb519102-50b8-4626-bb78-8d545e7dc57c" name="Build" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8e89abba-7201-4af6-8dec-563bc1cb63cb" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="0f9c9357-baaf-4d91-90c4-24dd6348348f" name="IImplementor" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::IImplementor">
+        <elementDefinition Id="cd48d407-a734-4d7b-9d35-7abeb85399c6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cdaec286-eb1c-45fd-ace0-d22f1dc442c7" name="SteelArmorBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c34be3b-dc28-4485-891a-6523ae266fe8" />
+        <generalsInternal>
+          <generalization Id="08c8d9a3-5d3b-4a90-a9d1-6c2c14f4f2c3" isSubstitutable="false">
+            <classMoniker Id="ca449867-88f3-43d9-b7f0-add4300b9b35" LastKnownName="Abstraction" />
+            <elementDefinition Id="d0515847-8ec2-45b7-9bb1-a794bc09b62c" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="dee8fc70-f1df-4906-941e-a886dfdbed45" name="Build" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f722900-173f-4133-8b3e-66f064a0fb5c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="189ac6c3-0c72-4abd-bd0b-1f57cd8ea7d0" name="Client">
+        <elementDefinition Id="e49501c6-f3d7-46ec-8d63-7f66c3c57b13" />
+        <suppliersInternal>
+          <dependency Id="7ab3cedb-be51-4307-9461-22e594716079">
+            <classMoniker Id="ca449867-88f3-43d9-b7f0-add4300b9b35" LastKnownName="Abstraction" />
+            <elementDefinition Id="da8450ed-c4b0-443f-ac04-9386a46e1105" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="72ec4817-8316-4098-be76-bb2e1d8c6564" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="95b308e1-5aa1-4977-9359-047a28697f77" name="Composite" linkedPackageId="83463d1a-f50f-4df1-b4c1-3bd04f232d19" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f49fac0a-4c38-4c65-9506-d5129d7cdf62">
+      <elementDefinition Id="3a44d999-0766-4903-b9f6-d8db7fd713a2" />
+      <body>foreach g in Nodes g.GatherData()</body>
+      <annotatedElements>
+        <classMoniker Id="d0558b22-af13-410e-a2c9-815ec62fdafe" LastKnownName="Composite" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="3b1564fb-6f89-4c41-94bf-5e7efda5a503">
+      <profileInstance Id="f8958f4e-9569-4722-a6b5-f4e86729135c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f49c8e3c-056a-428d-ae63-bcd33af07cca">
+      <profileInstance Id="886bc555-7d92-4382-9f48-75a1da80ec8a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4bb7124a-3a2a-406e-80fc-ecd5adefe2d9" name="INode" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f395a79a-f96c-431b-a492-0541bda0f0ff" />
+        <ownedOperations>
+          <operation Id="94341fda-9c8e-4408-bec5-9d87a8555055" name="AddNode" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1373f541-ffa7-4372-925f-79b46339d68e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d1b50cb9-af1e-496e-8201-dc2b375f67fc" name="INode" direction="In" isUnique="false">
+                  <elementDefinition Id="f653db08-e2c0-4b9f-988d-9d9a0532f4eb" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="72428066-0379-4e2d-82ab-6690649c02b2" name="GatherData" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dd8b1d86-5479-4e4d-8f8d-3f116b98e212" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6713b2b0-37e0-4c26-bf72-9c0c716b3b97" direction="Return" isUnique="false">
+                  <elementDefinition Id="a45890cf-022d-434c-84c2-8294c1aba5de" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3da804cb-e603-464f-b425-8314039c9389" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d0558b22-af13-410e-a2c9-815ec62fdafe" name="Composite" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="be2d4b66-c046-45af-bb6d-7126936a6ad9" />
+        <suppliersInternal>
+          <interfaceRealization Id="670c3a83-decf-4072-a980-b58662f7de26">
+            <interfaceMoniker Id="4bb7124a-3a2a-406e-80fc-ecd5adefe2d9" LastKnownName="INode" />
+            <elementDefinition Id="662d3c5f-6f0b-4a8d-bfe6-f933503a2812" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="7f1c9d09-8dc9-4865-92c0-87e5a757e3a7" isDerived="false" sourceEndRoleName="Composite" targetEndRoleName="INode" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="4bb7124a-3a2a-406e-80fc-ecd5adefe2d9" LastKnownName="INode" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4d533a5-c93c-4ee9-977d-9e1ddd559473" name="Composite" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="f98d398f-2f3e-4a2c-aa3c-7c1ec167c015" name="Lower" value="*">
+                      <elementDefinition Id="4c8715a6-6fe9-4c00-9960-982e2aab3318" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="5d3d2f0a-3cf6-4c1a-9090-dc64e700782c" name="Upper" value="*">
+                      <elementDefinition Id="82c7146d-f0c7-428e-9232-632eefcc0aea" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="af9cf461-4d27-4c2d-888b-359822734550" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5037e78b-e2bc-4612-ab12-25b144960fda" name="INode" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d9355a6-e97e-44a8-8af8-781c5bab9801" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="53cbb2a0-5fb2-44dc-a36d-f7fdad36eb16" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="932a5db7-8ab3-40a0-a3e8-4b84a3d5775e" name="Nodes" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1c582d5e-ed36-47fb-b3b4-14d0e8524eb5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="775b722a-9305-4064-981b-1c3801f96a3e" LastKnownName="List&lt;INode&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f5103126-741c-4ecf-9049-cb73165c27a0" name="AddNode" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="85aeb7c4-a3ba-4f03-82b2-593034684cab" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2f463fb6-9b74-4ad9-a2cd-a7d7d68d1d85" name="INode" direction="In" isUnique="false">
+                  <elementDefinition Id="d20213a3-ef3d-4510-82fa-55ca19541ce2" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c360e055-f6aa-4b81-901f-d3a14c40bb36" name="GatherData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="83283ee0-e047-41fd-b0a3-5d3fda7adbff" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="96b24b5d-ff4c-44a7-a078-993fc148cd22" direction="Return" isUnique="false">
+                  <elementDefinition Id="450f9cd1-6c3d-4248-b533-b299ef6d3fda" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3da804cb-e603-464f-b425-8314039c9389" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3da804cb-e603-464f-b425-8314039c9389" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ef1e253a-6e5b-406f-832f-2ef0b26d7186" name="Leaf" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23a01c84-812b-4920-9756-07a5ed664598" />
+        <suppliersInternal>
+          <interfaceRealization Id="0a4ddd9a-682a-46b8-8163-c864a5daaf4b">
+            <interfaceMoniker Id="4bb7124a-3a2a-406e-80fc-ecd5adefe2d9" LastKnownName="INode" />
+            <elementDefinition Id="5b0799f1-09d9-4b67-a883-bd21f0dcfd20" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="5eef0412-4d16-4f09-9881-e74ff1dbf298" name="AddNode" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="57894277-bdb8-4f6a-93db-c7da3562f50d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d59cd554-c846-4f57-9c71-ddb29d5d551a" name="INode" direction="In" isUnique="false">
+                  <elementDefinition Id="a7e4b5c5-e9a2-40dc-8773-5c4ef0670d3b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f2a7f27c-ae5f-4f8c-8f6e-c8d073374cca" name="GatherData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="63fc94b6-72a3-4561-abd6-808ececfc760" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5452f673-aafd-401f-9530-53c248934dc8" direction="Return" isUnique="false">
+                  <elementDefinition Id="7368a147-c9a8-4dd1-9664-8d2eb2fc56af" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3da804cb-e603-464f-b425-8314039c9389" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="775b722a-9305-4064-981b-1c3801f96a3e" name="List&lt;INode&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;INode&gt;">
+        <elementDefinition Id="58ef29b4-c1ae-4040-bd63-26c571f87fa8" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="83463d1a-f50f-4df1-b4c1-3bd04f232d19" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

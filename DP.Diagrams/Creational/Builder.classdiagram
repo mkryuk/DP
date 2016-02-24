@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0d89fdc7-712f-4a0c-aa3c-7443684f4725" name="Builder" linkedPackageId="d7ef632e-8058-42ed-92b2-7a950e374741" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0920cf64-14c4-4766-a414-1ca4d64ae2a7">
+      <profileInstance Id="a5b3dd6e-156c-44a5-b0e2-cd470df0253f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d9d6c070-5727-4515-b80a-8c331373b6af">
+      <profileInstance Id="85fa546e-8a8e-4404-8bb9-354757b1168a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="04f5cd2d-3ea7-4f5f-a2f3-67b6fba81c8e" name="Director" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d0a0c9c-3ba7-40ce-a29c-9b7962fcaee4" />
+        <targetEnds>
+          <association Id="87498d48-49ac-4fc5-b62c-bdadd77b9bdd" isDerived="false" sourceEndRoleName="Director" targetEndRoleName="Builder" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3b40a2e4-dfa6-4719-ac6d-5c5d44bf1ca7" LastKnownName="Builder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95b88d13-50d8-4382-ae90-98aa423c8849" name="Director" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bb3a4f6a-ad18-47b1-bca1-3e82f2b36a66" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1ff02c7a-f7e0-4f94-b4a6-2822cf283c41" name="Builder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d49bd73-8b01-4e22-b450-45b22d372376" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="41de9e87-0a8b-48eb-aff8-8aee1df0511c" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="9230b89f-9435-4c2c-bb32-f95e0744df46" name="BuildHouse" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ef54d9cd-17ca-4616-83a3-e02870a23a05" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a4fc060-6bc1-4ba1-81dc-4c5aba1856f4" name="IBuilder" direction="In" isUnique="false">
+                  <elementDefinition Id="c8de69ea-7c87-4931-bf6e-5e2eead24069" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d18a55df-cadf-4b19-a02b-c8f0afb73b0e" direction="Return" isUnique="false">
+                  <elementDefinition Id="0d8e889d-00fb-4c93-8471-e390c26b183d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3d110a85-e140-4400-9659-a21ebdced7c4" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="05b2fe34-5e16-451e-878f-0ea1963be9e3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f9fe4b5d-d98b-47d2-b454-ad4a8e22e252" direction="Return" isUnique="false">
+                  <elementDefinition Id="1a73c34d-979e-4d9c-a031-69dee7e7d26e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0bd11f2a-855e-425d-8bab-4fd8567cb3f4" LastKnownName="House" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="55193eba-9b70-4ce9-a465-393d95119d1a" name="ModernHouseBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="421995bc-d7d8-4950-a71f-5ca1f827ecfd" />
+        <generalsInternal>
+          <generalization Id="abd22c3d-4b87-403c-8ade-2c8b33772981" isSubstitutable="false">
+            <classMoniker Id="3b40a2e4-dfa6-4719-ac6d-5c5d44bf1ca7" LastKnownName="Builder" />
+            <elementDefinition Id="3f2d3122-02a6-4917-a9ab-b2728c272ffe" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="74608371-5ac8-4a85-a78e-528ae8d7b28d" isDerived="false" sourceEndRoleName="ModernHouseBuilder" targetEndRoleName="House" isLeaf="false" isAbstract="false">
+            <classMoniker Id="efc11ed8-47ba-460b-95c5-76813884c656" LastKnownName="House" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e88afc2b-be56-4c89-b1d7-3a0de1270011" name="ModernHouseBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="406c29b1-592f-43b8-a1b8-3290b9b97818" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f7874ac-febf-4e78-b070-5ae623ad3552" name="House" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9890768f-c384-434f-a6a0-673920ab717d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a58952b9-c52d-4b22-a239-c42660928150" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="9109d04f-01f2-4b1c-9660-e0daac659509" name="CreateBasement" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6d4d992-03be-4126-b27d-998b0c9468ae" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3deff324-e9a2-43dc-85f0-e5a20972ca71" direction="Return" isUnique="false">
+                  <elementDefinition Id="ec36976f-00f1-4934-b792-e7b6373d1936" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="36ec6ac7-1439-4f90-ac5f-6b43b7739062" name="CreateRoof" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="baf029b5-ee97-4553-a256-63eb4ebafeda" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6c48fd4e-3ee4-452c-9387-715bf9df7fc0" direction="Return" isUnique="false">
+                  <elementDefinition Id="bc02948e-1e68-4361-ba7a-0fa7d91dcc39" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e35a5650-9091-4d9d-a818-3338e5155d8b" name="CreateWalls" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d7c9b5fb-2f20-403e-9b4b-cf20a081b1e9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="40738917-6c56-479b-a0fe-584bf4e0fd01" direction="Return" isUnique="false">
+                  <elementDefinition Id="7b84082f-a494-430f-b785-d9888ca598ae" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4872c645-79a9-44ea-8432-d765908188c7" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9cbd59cb-6668-4c32-82aa-418b1dc6001b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="50c1500a-0c4b-4a08-8b41-db46a2e8cb1f" direction="Return" isUnique="false">
+                  <elementDefinition Id="f89d64dd-7288-4b4d-a512-0dd9d6db1441" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0bd11f2a-855e-425d-8bab-4fd8567cb3f4" LastKnownName="House" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7da784b8-2641-4001-adac-749a27872794" name="InstallWindows" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0f316578-4880-4021-a0d5-c19912aab333" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9fba65cc-74eb-433b-a664-3ce138330fbe" direction="Return" isUnique="false">
+                  <elementDefinition Id="e0b5f948-4520-4315-bc8c-fbfceb945290" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="83734aca-e38c-47d1-8d4d-1508248df850" name="CountryHouseBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="06ac953b-8b79-48e8-967c-eef51c8e2426" />
+        <generalsInternal>
+          <generalization Id="5e3b7c35-876a-42d0-b759-7172b0b73c50" isSubstitutable="false">
+            <classMoniker Id="3b40a2e4-dfa6-4719-ac6d-5c5d44bf1ca7" LastKnownName="Builder" />
+            <elementDefinition Id="8fc5ad1f-43a1-4c40-ae0d-1945dfa642a5" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="075a7337-c28c-402a-9828-01bc8a9e2cf9" isDerived="false" sourceEndRoleName="CountryHouseBuilder" targetEndRoleName="House" isLeaf="false" isAbstract="false">
+            <classMoniker Id="efc11ed8-47ba-460b-95c5-76813884c656" LastKnownName="House" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29e34fc2-5c4e-4d45-9163-79f083a9182d" name="CountryHouseBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="20c01410-03f1-4733-b47e-86d85f60da94" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ddae0c2c-a0ed-4e83-892f-0da7dd36511c" name="House" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="094e16a8-37aa-46fd-9909-3d354a601fa9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ddd2a5cf-e958-46d9-bfb6-4f87db90c019" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="ae24e788-3ecf-4c41-8215-3e7eaf3a2e35" name="CreateBasement" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e948132b-a435-4ce1-88f2-e6dda98e5aa4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2b83a6cf-f417-4dc5-89ea-560305dfc89b" direction="Return" isUnique="false">
+                  <elementDefinition Id="fdca4f9b-edcd-40cb-af66-2b1270b47174" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="678e3e82-4f37-440f-8d91-3a59ac5e8863" name="CreateWalls" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b9bd5c3a-7714-4b4b-89ef-005be1ee1739" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a0104d6c-19d8-44ad-906d-c95c1a935863" direction="Return" isUnique="false">
+                  <elementDefinition Id="4788aac2-b3c6-47f4-aa94-101032f5ea5e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8a383950-ff77-4b87-9451-704e96f68885" name="CreateRoof" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="43d1fe22-f0f7-4436-9461-2f6b6b6cec8c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e3eb385f-661a-4250-b713-c440208ea4cf" direction="Return" isUnique="false">
+                  <elementDefinition Id="e0ad70b6-055b-42e9-9285-45447bcc41da" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a9428e8-edb2-42fd-bc33-2f346fcd01fd" name="InstallWindows" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b1ebb02-065b-4491-811e-c4aa867a3c97" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1ad798b1-9dff-439c-8c49-dd77f1e6f9d3" direction="Return" isUnique="false">
+                  <elementDefinition Id="49d50c59-af03-4512-bf46-de0b4d599a36" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7597af92-9cf9-4812-86a9-c95fe74510d4" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d41db20-7147-4ae0-8185-3cab37532572" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="75a0a99e-7203-4d75-a324-b0777c371826" direction="Return" isUnique="false">
+                  <elementDefinition Id="9dded84d-7c8a-434b-9bbe-264ffe56da8c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0bd11f2a-855e-425d-8bab-4fd8567cb3f4" LastKnownName="House" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a9f0d46e-4764-44a4-89ce-0b2912815cea" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="f7d0c1a4-e8d0-497f-b44e-df94580c59c1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0bd11f2a-855e-425d-8bab-4fd8567cb3f4" name="House" isAbstract="false" isLeaf="false" cachedFullName="House">
+        <elementDefinition Id="fb54053a-037a-4097-a8dd-236549849b70" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="efc11ed8-47ba-460b-95c5-76813884c656" name="House" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e254dba2-9508-42ab-b745-ca7b58ea78b3" />
+        <ownedAttributesInternal>
+          <property Id="3043e72f-f8c4-4bec-abcf-d27a153b5571" name="List&lt;string&gt; parts" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de0ea27c-782b-49ea-8b06-12539e28e9db" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3b40a2e4-dfa6-4719-ac6d-5c5d44bf1ca7" name="Builder" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f9b4b472-dc62-4338-a670-abf2701e1899" />
+        <ownedAttributesInternal>
+          <property Id="98b1884b-7f04-4e55-8eb4-4c7b55c16e33" name="result" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="521d3428-60d3-4bf3-9ec7-4985832f2677" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c272ce0f-52c8-4fd5-97c2-4a3db1424074" LastKnownName="House" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b91770db-07c5-4b36-b96f-0a3aab970c36" name="CreateBasement" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="517d98a1-aa3d-4496-bb68-4810938d5734" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4544cde9-3f7a-407b-8aee-d97b4c556e45" direction="Return" isUnique="false">
+                  <elementDefinition Id="2c286a4f-1fb9-4b83-a540-8de605c5e437" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64f27b83-28a4-4212-b40e-56c6c7e711c6" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8ddc4be2-eb2a-4544-8194-78350f7e6647" name="CreateRoof" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c74ca4ac-084c-40e9-9b03-2ed1e7fb6a4d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a0d4c4ea-f9ff-4515-b6ec-91854075e29c" direction="Return" isUnique="false">
+                  <elementDefinition Id="0a7291fa-7a0d-4ac7-954e-0de829a38c21" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64f27b83-28a4-4212-b40e-56c6c7e711c6" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9019e3bf-0e1b-414a-8073-143c8d13e707" name="CreateWalls" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8ba7242b-e681-4297-b361-49a63fadd76b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3ba0dda2-083f-48eb-b957-3115a847e462" direction="Return" isUnique="false">
+                  <elementDefinition Id="5dbe0aee-d021-4b28-8e8b-a91c8dd59b9e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64f27b83-28a4-4212-b40e-56c6c7e711c6" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a2558433-6389-4ff0-92a0-114fbf9b69ca" name="GetResult" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fe10734a-d39e-457e-af04-e8dbeed404ca" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3b38df77-9ac2-41b5-9398-b85caa6a7772" direction="Return" isUnique="false">
+                  <elementDefinition Id="9cc3e60f-ded4-4f16-b90f-1b7a7a1b1015" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c25184cd-3966-4183-b865-57d57aa9f321" LastKnownName="House" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a7073755-bef3-4689-9578-c99af55a93a7" name="InstallWindows" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f3a02c3-c382-4714-9a56-d76d6a378777" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7e08ff66-dde6-4b6a-bd74-b9eff2f7607d" direction="Return" isUnique="false">
+                  <elementDefinition Id="c720f9ff-7f80-4a39-bdff-b1070e236492" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64f27b83-28a4-4212-b40e-56c6c7e711c6" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="64f27b83-28a4-4212-b40e-56c6c7e711c6" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="f7d0c1a4-e8d0-497f-b44e-df94580c59c1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c25184cd-3966-4183-b865-57d57aa9f321" name="House" isAbstract="false" isLeaf="false" cachedFullName="House">
+        <elementDefinition Id="fb54053a-037a-4097-a8dd-236549849b70" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c272ce0f-52c8-4fd5-97c2-4a3db1424074" name="House" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::House">
+        <elementDefinition Id="e254dba2-9508-42ab-b745-ca7b58ea78b3" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="d7ef632e-8058-42ed-92b2-7a950e374741" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

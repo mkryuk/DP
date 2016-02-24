@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="463bb715-2b95-4461-81c2-ae5b6d26df5c" name="AbstractFactory" linkedPackageId="76ff86a4-f4fb-4179-977f-07b38c80afde" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8f6f5da9-5592-403c-b80d-d91d9cac241b">
+      <profileInstance Id="f7da3180-4b5f-4545-9854-c6f27b6d79c7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b245e664-db62-43a4-b0d3-2c7f01754e0e">
+      <profileInstance Id="bd3b9436-9e50-4ee8-87fc-d1a2ffb6d82a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7f5c602e-3a1e-434b-9c58-f7973c67f058" name="IAbstractFactory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f694757f-9893-4471-80ba-cd05136e2ed9" />
+        <ownedOperations>
+          <operation Id="617dc9cf-c1e7-4be8-9e8d-7fd8685f5b66" name="GetSoldier" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="57d85114-5e8d-4026-8c33-eb1d7b652a74" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7112d39a-6387-49e9-916a-1aff2e7d3813" direction="Return">
+                  <elementDefinition Id="cbf54628-006f-4b64-8916-eabd0a785f77" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="11957fb9-2201-45e8-88fe-d16c2be59b40" name="GetCar" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="30089057-c8b4-41be-b8be-d82811c607b9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="df4548cd-3d74-4721-9d86-d0e626053794" direction="Return" isUnique="false">
+                  <elementDefinition Id="11cebfa6-cdd6-4f8a-8519-1c69767808bb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e4e86d3e-3dd7-497b-96c6-a5d47465d919" name="IProduct" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="82713c1e-0692-468a-aa0c-9a25eaa4d63f" />
+        <ownedAttributes>
+          <property Id="2584056e-42c7-4d7a-8792-32796a5de9d4" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6cae22c9-8ca5-4d10-8345-6b86cc10776a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6aaf3690-bf45-4265-bf71-7719f6c5d131" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="6aaf3690-bf45-4265-bf71-7719f6c5d131" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" name="IProduct" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::IProduct">
+        <elementDefinition Id="82713c1e-0692-468a-aa0c-9a25eaa4d63f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f31be115-c290-44ec-bfa6-edbc869f8c0a" name="SteelFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e3cd1569-bcdd-4543-8ab8-12ce8280f1f5" />
+        <suppliersInternal>
+          <interfaceRealization Id="e8c3c287-bba7-4643-99f0-2fb2057a7cbd">
+            <interfaceMoniker Id="7f5c602e-3a1e-434b-9c58-f7973c67f058" LastKnownName="IAbstractFactory" />
+            <elementDefinition Id="ebb1a48f-59ba-47d5-905b-eadb488d9c71" />
+          </interfaceRealization>
+          <dependency Id="0ba16685-863d-48b2-93e9-f9299ee383f0">
+            <classMoniker Id="201f3a79-7205-4c96-8c59-5db1c464760d" LastKnownName="SteelCar" />
+            <elementDefinition Id="ca01fb2e-cc8c-43d8-a63e-99aafa4beae1" />
+          </dependency>
+          <dependency Id="9cfaf0d0-ca17-4782-8e08-ba8d8a6fdc82">
+            <classMoniker Id="8c69f34f-c58a-4d99-a911-4fcb5f43b76b" LastKnownName="SteelSoldier" />
+            <elementDefinition Id="7291a331-5fff-4bf2-938e-28f8fb5538d2" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="6918c550-4606-435e-b4ac-8a35de774d25" name="GetSoldier" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7408035d-728b-4901-a5c1-67a5189a3851" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="45333493-4722-42c9-8ed3-d7e0d5520c0e" direction="Return">
+                  <elementDefinition Id="5b3003f4-d54f-48c8-ad7b-b91e33e45c92" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="88120451-cd87-4fdb-8aef-67af5c9380f1" name="GetCar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="39ad184e-d744-4c0d-8e4f-c5cb57d1445c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="94512fb8-aca9-4947-aa4e-238c1e22ab02" direction="Return" isUnique="false">
+                  <elementDefinition Id="3eb75e50-73e5-447d-8d0f-00689d5c8efb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b3cdafa3-7a2b-41c3-87b0-288555892256" name="WoodenFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b85d1aa2-6b17-4ed9-9b1a-89147f1bfb9e" />
+        <suppliersInternal>
+          <interfaceRealization Id="21134359-baf9-4a0e-90ea-9c7ab7e4f211">
+            <interfaceMoniker Id="7f5c602e-3a1e-434b-9c58-f7973c67f058" LastKnownName="IAbstractFactory" />
+            <elementDefinition Id="82713279-78ad-408a-903f-18925b92459c" />
+          </interfaceRealization>
+          <dependency Id="749c0bfc-1086-4d4b-b07a-43cc6658c6e8">
+            <classMoniker Id="915d12ee-b6ab-444b-8f9b-25e3bb680f04" LastKnownName="WoodenCar" />
+            <elementDefinition Id="f9f58ea0-14b4-4ca7-be1b-7ff1df92cf5f" />
+          </dependency>
+          <dependency Id="42a779ea-4a21-458f-9658-d98263b45470">
+            <classMoniker Id="530b69ff-1eaa-480c-b7c4-2d1b15bcd651" LastKnownName="WoodenSoldier" />
+            <elementDefinition Id="9ab3e560-b373-4e23-9d62-b1c52c4e4d61" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="162edf3e-7292-4781-80b9-4faa21189775" name="GetSoldier" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6b79f59-b50c-4d6e-8bd2-7aed1a9a4356" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="14fbd128-57f6-45f5-a512-c71bb5a85d33" direction="Return">
+                  <elementDefinition Id="013301b9-82f2-4694-a61c-1e929ab565e2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e07454f6-c887-4f27-a065-b44d641612be" name="GetCar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="83b2ad33-5cbf-4890-a3ae-2442d4f8b877" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="746b3276-0dbe-4cf3-88fb-a6337c8fbe52" direction="Return" isUnique="false">
+                  <elementDefinition Id="27c58902-bb5a-4184-be49-317555736456" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a5900a6d-194a-4a93-8a2f-95fe0dc1b933" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="201f3a79-7205-4c96-8c59-5db1c464760d" name="SteelCar" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d7bb9d80-4713-4150-8b26-e94fec67a7f8" />
+        <suppliersInternal>
+          <interfaceRealization Id="6a045684-3c16-415d-936d-3147220e3c3b">
+            <interfaceMoniker Id="e4e86d3e-3dd7-497b-96c6-a5d47465d919" LastKnownName="IProduct" />
+            <elementDefinition Id="4aef184b-4040-4c36-a6f9-7fbca05dc107" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8c69f34f-c58a-4d99-a911-4fcb5f43b76b" name="SteelSoldier" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3ce39896-6255-4e52-bb84-e892e3542af5" />
+        <suppliersInternal>
+          <interfaceRealization Id="681cdc1f-dd26-4121-99ca-990e86acec88">
+            <interfaceMoniker Id="e4e86d3e-3dd7-497b-96c6-a5d47465d919" LastKnownName="IProduct" />
+            <elementDefinition Id="a337855a-4a78-4db6-8116-80e75e35e273" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="915d12ee-b6ab-444b-8f9b-25e3bb680f04" name="WoodenCar" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="37f1926a-6358-4fcb-a130-9607b05066b9" />
+        <suppliersInternal>
+          <interfaceRealization Id="bfdddafa-bda1-4fa8-901a-d1def1023bf6">
+            <interfaceMoniker Id="e4e86d3e-3dd7-497b-96c6-a5d47465d919" LastKnownName="IProduct" />
+            <elementDefinition Id="874b547b-a839-4c53-9235-3caebe8c9969" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="530b69ff-1eaa-480c-b7c4-2d1b15bcd651" name="WoodenSoldier" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7e48c41d-dba3-47cc-b18d-004e5ef22520" />
+        <suppliersInternal>
+          <interfaceRealization Id="0a45aebe-a147-4b3c-a836-d5580d51b255">
+            <interfaceMoniker Id="e4e86d3e-3dd7-497b-96c6-a5d47465d919" LastKnownName="IProduct" />
+            <elementDefinition Id="ea7b0f7a-083d-4231-b748-50a63cba96a4" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="76ff86a4-f4fb-4179-977f-07b38c80afde" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

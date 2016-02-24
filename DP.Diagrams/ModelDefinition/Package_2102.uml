@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f6b69d94-b502-4370-b9ed-410e1a457dac"
+  name="Facade" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="69c009dc-acd5-445f-a582-f749c9c435d4"
+        name="Tree"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="3fdaf501-eb83-4dd6-b43a-954881a08d02"
+            name="Grow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9f97a276-8fea-499b-ade7-dbff33dee63d"
+        name="Son"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="3513d8cb-9c30-4583-a8c7-ee8f9cdf758b"
+            name="Foster"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="45ef8b4e-e8f7-46d8-8797-6e97b45b77c7"
+        name="House"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="73a55de3-367b-4a40-9070-ea33cbfb6ca2"
+            name="Build"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="082cdf41-1909-4099-aec5-820db80f61c3"
+        name="Facade"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="b96eae10-99ca-43f3-b04a-312ec1f3b1d2">
+            <classMoniker
+              Id="69c009dc-acd5-445f-a582-f749c9c435d4"
+              LastKnownName="Tree"
+              LastKnownLocation="Package_2102.uml" />
+          </dependency>
+          <dependency
+            Id="12fa10ed-b713-423b-a95f-b60fe8093523">
+            <classMoniker
+              Id="45ef8b4e-e8f7-46d8-8797-6e97b45b77c7"
+              LastKnownName="House"
+              LastKnownLocation="Package_2102.uml" />
+          </dependency>
+          <dependency
+            Id="34800233-c1fc-43ac-9354-1d0888ddfe42">
+            <classMoniker
+              Id="9f97a276-8fea-499b-ade7-dbff33dee63d"
+              LastKnownName="Son"
+              LastKnownLocation="Package_2102.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1dbf0003-2346-46bc-97c7-40344b725b54"
+            name="HaveANiceLife"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

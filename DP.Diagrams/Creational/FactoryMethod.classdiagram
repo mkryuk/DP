@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3a49c2b0-b485-4930-a75d-b073a673a34f" name="FactoryMethod" linkedPackageId="ec79634b-1f3e-4d2d-aeca-f9e4d009297a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="da6a452a-87a9-47a1-a68c-29d568c49451">
+      <profileInstance Id="2c9e76a5-701d-468f-a7b0-57054645e718" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="70fa6105-fd99-4743-8748-3fbbac33e844">
+      <profileInstance Id="d9e42bb3-cc06-46b0-8ca0-b31e9036ab90" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="b630cf59-c544-4fff-b385-87be0941361a" name="IProduct" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="00d52fde-3377-4d95-8b4a-54a8e7c83c5e" />
+        <ownedAttributes>
+          <property Id="72b6fe21-6f06-4bf8-9dc9-81a1a5a1dbe8" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3520563e-a030-4339-9cae-a300f8f00631" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7a092bdb-9efd-4a65-8a96-672062dea77d" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="7a092bdb-9efd-4a65-8a96-672062dea77d" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="53511867-44eb-4a32-b107-0968c1803ce4" name="Car" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="518b9856-2581-4513-a5d4-66864edf2c8b" />
+        <suppliersInternal>
+          <interfaceRealization Id="e8739183-ffaa-4186-8705-1aa095b9e73f">
+            <interfaceMoniker Id="b630cf59-c544-4fff-b385-87be0941361a" LastKnownName="IProduct" />
+            <elementDefinition Id="755c4d55-a282-4b24-9983-3f9ec2b0ba48" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d498f700-228c-47d3-abf5-6fa2bae299a6" name="Soldier" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="003da941-f7ed-410a-808b-eb805820eecf" />
+        <suppliersInternal>
+          <interfaceRealization Id="c138fe99-1cd7-4e9f-a61e-e84c389f7033">
+            <interfaceMoniker Id="b630cf59-c544-4fff-b385-87be0941361a" LastKnownName="IProduct" />
+            <elementDefinition Id="7d04568b-d893-4866-bc15-4992a10ccf24" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="df3715e6-97d7-458b-bb39-0390f9b9de2a" name="IFactoryMethod" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4385d77e-463e-43ee-aaa9-b9280c46f772" />
+        <ownedOperations>
+          <operation Id="b1909772-5267-474b-bf96-48d5077aa980" name="GetToy" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f8a9bb28-ffa1-45c6-a7dd-6544a6da7a6f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="09e77961-ff27-49f8-b076-209284bb5a29" direction="Return" isUnique="false">
+                  <elementDefinition Id="557b31c8-5f0b-4c6a-aa88-bed055d3f03d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="032f7a44-78bb-4146-824f-94e7165fa9c8" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="032f7a44-78bb-4146-824f-94e7165fa9c8" name="IProduct" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::IProduct">
+        <elementDefinition Id="82713c1e-0692-468a-aa0c-9a25eaa4d63f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c8967569-2440-469a-8025-e55f2b520c97" name="ToyFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a10e035d-ad62-4cb7-8d2c-12addd5e10a7" />
+        <suppliersInternal>
+          <interfaceRealization Id="540464a4-0878-4273-b81d-9d7663e56eca">
+            <interfaceMoniker Id="df3715e6-97d7-458b-bb39-0390f9b9de2a" LastKnownName="IFactoryMethod" />
+            <elementDefinition Id="b9f1dd4b-6fb1-4056-b6a1-ab62f65ed1cd" />
+          </interfaceRealization>
+          <dependency Id="cf7d998e-7958-491b-89b3-5fcaae33a98d">
+            <classMoniker Id="d498f700-228c-47d3-abf5-6fa2bae299a6" LastKnownName="Soldier" />
+            <elementDefinition Id="4d9c4f77-388c-450f-945c-111d2d5348f2" />
+          </dependency>
+          <dependency Id="e0f830b4-c2b3-43f5-b626-2c970060186c">
+            <classMoniker Id="53511867-44eb-4a32-b107-0968c1803ce4" LastKnownName="Car" />
+            <elementDefinition Id="bd3cfd5d-6f72-4749-bad9-5ef8e8e24ea6" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="0ba6dfe9-5ebf-4db7-9e5c-ddbf047cb148" name="GetToy" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f052550e-63f9-4a2f-8c8e-e12bb7457b5f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6f8e1d24-9334-45c9-a014-0b638138f2c4" direction="Return" isUnique="false">
+                  <elementDefinition Id="46e1edfd-bb3e-4d1c-8c23-5c8817d4cfd9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="032f7a44-78bb-4146-824f-94e7165fa9c8" LastKnownName="IProduct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ec79634b-1f3e-4d2d-aeca-f9e4d009297a" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>
