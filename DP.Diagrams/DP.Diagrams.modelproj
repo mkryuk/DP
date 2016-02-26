@@ -43,6 +43,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\Interpreter.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\Iterator.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\Iterator.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\Iterator.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -51,6 +58,9 @@
       <DependentUpon>Creational\Singleton.classdiagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package_0050.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1433.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1948.uml">

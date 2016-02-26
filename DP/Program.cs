@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DP.Behavioral.Chain_of_responsibility;
 using DP.Behavioral.Command;
 using DP.Behavioral.Interpreter;
+using DP.Behavioral.Iterator;
 using DP.Creational.AbstractFactory;
 using DP.Creational.Builder;
 using DP.Creational.FactoryMethod;
@@ -44,7 +45,8 @@ namespace DP
             //Behavioral patterns//
             //UsingChainOfResponsibility.Run();
             //UsingCommand.Run();
-            UsingInterpreter.Run();
+            //UsingInterpreter.Run();
+            UsingIterator.Run();
         }
     }
 }

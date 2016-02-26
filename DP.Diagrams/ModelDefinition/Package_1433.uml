@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bffca6f7-43a6-43e2-8cc4-217fe1a0adca"
+  name="Client" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="13bf979d-2c8e-4724-bd9a-945cdc4be502">
+      <classMoniker
+        Id="8484f99a-e3c2-4a0d-97d5-d80ff2f85d40"
+        LastKnownName="Iterator"
+        LastKnownLocation="DP.Diagrams.uml" />
+    </dependency>
+    <dependency
+      Id="d3237569-d842-4f47-ada1-0230c08e6076">
+      <classMoniker
+        Id="6da3cd2b-d9ef-425e-ad25-71a65bdf15ba"
+        LastKnownName="Iterable"
+        LastKnownLocation="DP.Diagrams.uml" />
+    </dependency>
+  </suppliersInternal>
+</package>

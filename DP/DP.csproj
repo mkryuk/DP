@@ -62,6 +62,11 @@
     <Compile Include="Behavioral\Interpreter\Sentence.cs" />
     <Compile Include="Behavioral\Interpreter\UsingInterpreter.cs" />
     <Compile Include="Behavioral\Interpreter\Word.cs" />
+    <Compile Include="Behavioral\Iterator\ComplexObject.cs" />
+    <Compile Include="Behavioral\Iterator\ComplexObjectIterator.cs" />
+    <Compile Include="Behavioral\Iterator\Iterable.cs" />
+    <Compile Include="Behavioral\Iterator\Iterator.cs" />
+    <Compile Include="Behavioral\Iterator\UsingIterator.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />
