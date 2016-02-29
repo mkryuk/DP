@@ -50,6 +50,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\Iterator.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\Mediator.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\Mediator.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\Mediator.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>

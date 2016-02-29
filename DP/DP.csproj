@@ -67,6 +67,9 @@
     <Compile Include="Behavioral\Iterator\Iterable.cs" />
     <Compile Include="Behavioral\Iterator\Iterator.cs" />
     <Compile Include="Behavioral\Iterator\UsingIterator.cs" />
+    <Compile Include="Behavioral\Mediator\Colleague.cs" />
+    <Compile Include="Behavioral\Mediator\SameGroupCommunicator.cs" />
+    <Compile Include="Behavioral\Mediator\UsingMediator.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="Creational\Prototype\UsingPrototype.cs" />
     <Compile Include="Creational\Singleton\Singleton.cs" />
     <Compile Include="Creational\Singleton\UsingSingleton.cs" />
+    <Compile Include="Behavioral\Mediator\Mediator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structural\Adapter\SpecificDatabase.cs" />

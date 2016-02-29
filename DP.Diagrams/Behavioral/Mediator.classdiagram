@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="c8a879ba-e9d8-495c-a723-b20b487c2283" name="Mediator" linkedPackageId="2952217d-cf03-4f51-8b23-5bb762203b31" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="7f30523f-867c-4789-907c-d867fb7ef209">
+      <elementDefinition Id="9dcb5e0c-d333-402b-8d4b-f0ba031ea2a7" />
+      <body>Send(message) sends the message to all colleagues in the same group</body>
+      <annotatedElements>
+        <classMoniker Id="40e68dcb-01bd-444b-b046-cf9c30bfe050" LastKnownName="SameGroupCommunicator" />
+      </annotatedElements>
+    </comment>
+    <comment Id="21445ee8-bd60-41c7-b0ef-2d8a52409bf5">
+      <elementDefinition Id="2e853b0b-4e22-4d2b-b1d0-c18bec3387df" />
+      <body>Send(message) sends message to the Mediator</body>
+      <annotatedElements>
+        <classMoniker Id="81ab7728-8687-44c1-93b5-e7f5f2851f45" LastKnownName="Colleague" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="37186b2a-ae50-4cf1-b98f-e8cce633ce21">
+      <profileInstance Id="0e4118c1-85d9-471c-93f8-429a4d80fdc2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="015c0e36-cb94-4d58-9a52-64cd15179db0">
+      <profileInstance Id="6e96015c-68cf-4511-8abb-a3e591fe0f00" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0566fc69-ac2c-4dbc-85ca-36c1a03a9c0f" name="Mediator" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="884943f4-03b7-4c4b-b3e1-5fa81e46d0bc" />
+        <targetEnds>
+          <association Id="7c8a9ce3-7ea2-4e1f-b7b0-822e9bf13bfa" isDerived="false" sourceEndRoleName="Mediator" targetEndRoleName="Colleague" isLeaf="false" isAbstract="false">
+            <classMoniker Id="81ab7728-8687-44c1-93b5-e7f5f2851f45" LastKnownName="Colleague" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d10af85d-b381-452b-a7e5-c6a0b6c05d55" name="Mediator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="008b2967-44ef-4163-a182-0f6b22f13ae1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db89de82-4eac-4cc5-9bac-fd40592c92e4" name="Colleague" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="ade0a4b1-8cdb-4fc2-b0d8-37fda83ca679" name="Lower" value="*">
+                      <elementDefinition Id="cbe9ff8d-d212-46a5-b36a-0a8f54c6b450" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b92031d9-abff-4c1c-846f-a65356b8f5fc" name="Upper" value="*">
+                      <elementDefinition Id="ede2ab5e-8434-4980-bcbc-32be2ee2d743" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="dc8d3144-8f99-4434-ac92-f4226d996c18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f37cc342-7e27-4c3f-963c-1ae38d923438" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="6b383224-5f68-42d2-8a62-f0b3c281fe11" name="Colleagues" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5316e08f-6530-4176-a985-27743c979664" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3b859bce-5dd5-45bf-a61b-625ac66aced3" LastKnownName="List&lt;Colleague&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="cf979043-ac8b-48b6-ba1f-907c08001edf" name="AddColleague" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="42e90344-f5fd-4b74-9d3e-73c2cf80cb18" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7bfc73fd-9309-4733-bd3a-40dc3f8de686" name="colleague" direction="In" isUnique="false">
+                  <elementDefinition Id="e1f0d552-e63f-49a3-a0b8-1b4c5dea7a39" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cec1197b-1cc7-4c72-b872-d7960f809b72" LastKnownName="Colleague" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ef42a023-508a-4330-84ce-065e540d8d14" direction="Return">
+                  <elementDefinition Id="c5a05c82-50f9-4c1f-92ef-31012adb7b00" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1f1732b2-0161-4d03-91e9-010c45580446" name="Send" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c5417303-075b-42cc-bf90-6c33f69659a1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f6dc04f2-a06a-47f7-97b1-bbaa4fabf660" name="message" direction="In" isUnique="false">
+                  <elementDefinition Id="5b236f28-1b38-4cca-bd4f-269b76f595ba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38692d0a-c97b-4474-a4e7-a650292503bc" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="80e5d222-ade1-41ad-8731-e24927a07dec" name="colleague" direction="In" isUnique="false">
+                  <elementDefinition Id="2811ae12-8396-4fb4-8ef0-08e0a9842434" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cec1197b-1cc7-4c72-b872-d7960f809b72" LastKnownName="Colleague" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3b859bce-5dd5-45bf-a61b-625ac66aced3" name="List&lt;Colleague&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Colleague&gt;">
+        <elementDefinition Id="64011419-bcac-4a56-87f5-7a164c49989f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cec1197b-1cc7-4c72-b872-d7960f809b72" name="Colleague" isAbstract="false" isLeaf="false" cachedFullName="Colleague">
+        <elementDefinition Id="360ec909-79f2-421c-9531-de268ab5e9a1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="38692d0a-c97b-4474-a4e7-a650292503bc" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="40e68dcb-01bd-444b-b046-cf9c30bfe050" name="SameGroupCommunicator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="738a8df9-293c-4917-ab50-516e0a591a14" />
+        <generalsInternal>
+          <generalization Id="3bd4ba1e-6834-440c-bc28-b8ceb2166daf" isSubstitutable="false">
+            <classMoniker Id="0566fc69-ac2c-4dbc-85ca-36c1a03a9c0f" LastKnownName="Mediator" />
+            <elementDefinition Id="094589bc-0782-482a-990b-e454cd441a2a" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="7963ca82-d697-422c-8ca8-e23a7e9ed82b" name="Send" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50d0cfa1-84fb-4bf8-aed9-3aa5d742a8aa" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7e354730-ba8a-430f-bd2b-4e55849b381e" name="message" direction="In" isUnique="false">
+                  <elementDefinition Id="81b0e0b2-ee9e-4f7c-bee5-db7d43b832fe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38692d0a-c97b-4474-a4e7-a650292503bc" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b6509675-a176-48dc-9429-3a6b0079006e" name="colleague" direction="In" isUnique="false">
+                  <elementDefinition Id="9f7b69d3-96fe-43fc-ac24-97928b3ee9a6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cec1197b-1cc7-4c72-b872-d7960f809b72" LastKnownName="Colleague" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="81ab7728-8687-44c1-93b5-e7f5f2851f45" name="Colleague" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23cc01fa-9efa-444b-b2dc-c16f88ea1fdd" />
+        <ownedAttributesInternal>
+          <property Id="57b9b059-4c6c-4015-8899-ac7b33603d0f" name="Mediator" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f2e45f6d-2694-4b92-8469-a8e058f0cc30" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ba9b7843-d1eb-4eee-b5a8-cfee4216278f" LastKnownName="Mediator" />
+            </type_NamedElement>
+          </property>
+          <property Id="7d34012f-b0e8-4c6e-b909-d432e78aa77b" name="GroupName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3317557e-557c-44d3-aeab-9861f5f9f1ce" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="862fd91b-02a9-4371-a12c-285001ebe451" LastKnownName="Group" />
+            </type_NamedElement>
+          </property>
+          <property Id="d1adf4f2-5910-40d4-9fb3-2d2a77a28d5f" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0d01e2a4-ae69-42e6-a58e-d11356ab2cb9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="38692d0a-c97b-4474-a4e7-a650292503bc" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="def71257-c025-44f5-b2f6-72bab500e90b" name="Send" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3dc08d0d-1c54-4cf1-9870-2ae35a333021" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1bab5d73-d217-4217-b3e1-f17c88d040fc" name="message" direction="In" isUnique="false">
+                  <elementDefinition Id="a6aee521-073d-4260-97ac-d2c2df7a6a37" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38692d0a-c97b-4474-a4e7-a650292503bc" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="301fece2-fc53-4635-ae22-a01f15aa486a" name="Receive" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cfd57960-1544-46b6-a6a1-d13f911a2adb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bfa783b6-a9f1-4b97-b9c1-c5fd7744e9cb" name="message" direction="In" isUnique="false">
+                  <elementDefinition Id="4bb11849-7ec9-41d4-97c1-d2d9a5e2415f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="38692d0a-c97b-4474-a4e7-a650292503bc" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ba9b7843-d1eb-4eee-b5a8-cfee4216278f" name="Mediator" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::Mediator">
+        <elementDefinition Id="884943f4-03b7-4c4b-b3e1-5fa81e46d0bc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="862fd91b-02a9-4371-a12c-285001ebe451" name="Group" isAbstract="false" isLeaf="false" cachedFullName="Group">
+        <elementDefinition Id="0257555e-7817-44ec-83b7-8bbb2ec08e1b" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="2952217d-cf03-4f51-8b23-5bb762203b31" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>
