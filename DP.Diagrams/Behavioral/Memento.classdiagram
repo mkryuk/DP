@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="18e67f10-95ca-412f-b4e2-3a8d19dfb347" name="Memento" linkedPackageId="eb1de198-e2d3-4fbd-a578-68c91124a36a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="a3267cba-1f5a-4d6c-ab48-f20837f61d4e">
+      <elementDefinition Id="da2fa39b-92d2-417b-a8db-94bb66e5e37d" />
+      <body>Stores State as GameState object</body>
+      <annotatedElements>
+        <classMoniker Id="27ff2cd3-9a03-441b-8b80-3e0c46dcd5f8" LastKnownName="GameMemento" />
+      </annotatedElements>
+    </comment>
+    <comment Id="421517b7-268a-445e-a10c-7bd33e9ff2a9">
+      <elementDefinition Id="cf4383e7-6a0d-46bb-85cc-892cfdea9215" />
+      <body>Uses GameMemento object to save and restore its State
+</body>
+      <annotatedElements>
+        <classMoniker Id="0e8bdb5a-8a27-4458-94a6-a5a4b4bba8f1" LastKnownName="GameOriginator" />
+      </annotatedElements>
+    </comment>
+    <comment Id="4b317637-add8-4243-8e67-fcfd2467285f">
+      <elementDefinition Id="5aff303c-10a6-4183-9b23-282fadc212fd" />
+      <body>Stores several states in stack</body>
+      <annotatedElements>
+        <classMoniker Id="638e5b2a-1ddb-4ddc-8530-760b94e6b258" LastKnownName="Caretaker" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="c077400c-1db8-4fb8-b29d-55d3b46e0009">
+      <profileInstance Id="331db207-9e8c-4ad2-92a3-b3bf414a4ab3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5f9d7ae7-02e9-4bdf-9e38-936213d2dd2b">
+      <profileInstance Id="7064aa48-d90d-4490-b9fb-b5ff9c8ead33" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="638e5b2a-1ddb-4ddc-8530-760b94e6b258" name="Caretaker" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0d5667c0-c399-40f5-a284-934cdec699a7" />
+        <targetEnds>
+          <association Id="0680bee9-9c10-4ef3-92be-bd6fb9624d63" isDerived="false" sourceEndRoleName="Caretaker" targetEndRoleName="Memento" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1767c42a-1172-44f2-b65e-30a86ddcf870" LastKnownName="Memento" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8c651ad2-3ff1-4186-882e-ebf4a4de8e54" name="Caretaker" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c0ebbca1-cf05-4a1c-8909-eb70e61240b4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63ec68f3-dbc4-4348-bba0-58304f1ebc82" name="Memento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="9035ee54-e473-4b25-a19f-4cd2157615cc" name="Lower" value="*">
+                      <elementDefinition Id="acbbd17f-b8c0-4a15-8f84-c694fbfb773f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4f828742-25b7-4782-bf04-8d226cc0a815" name="Upper" value="*">
+                      <elementDefinition Id="b13aa5b1-a4cd-42f9-bc58-417171247bd5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2c9e5bf9-5183-4413-95d6-10dc08af2a3b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f464d08c-d1c9-4bc7-a139-0e8243314ee9" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="97fd4680-ae1f-4247-bf8e-6066d7190dba" name="States" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de9362bb-fe1d-4c6f-a859-8b7d1cb741e1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cae72877-cc01-42bb-8c24-a29bf8571810" LastKnownName="Stack&lt;Memento&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="de381c3e-17a8-4b0c-80ab-a3b1cab85aee" name="SaveState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a2280812-d2c4-495d-96e5-b609ea32c398" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="da395345-4f63-4300-af1c-592588d64994" name="memento" direction="In" isUnique="false">
+                  <elementDefinition Id="bae74b53-ba06-4b39-84c4-a17581f7be65" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b66e1f54-0474-494e-a2a9-798d5f719fee" LastKnownName="Memento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b43b4e9e-f776-4b69-a924-24f8722d0423" name="RestoreState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5a636c75-9d80-4d6a-8259-b2d6c5bc5313" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6be9204c-7c06-42eb-95dc-c90fd12f714a" direction="Return" isUnique="false">
+                  <elementDefinition Id="a50a9951-70f8-4815-aae4-b1d8e576d2c2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b66e1f54-0474-494e-a2a9-798d5f719fee" LastKnownName="Memento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1767c42a-1172-44f2-b65e-30a86ddcf870" name="Memento" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="62e48151-94ad-47ba-b9c3-b5ff49acc4fa" />
+        <ownedAttributesInternal>
+          <property Id="a92e9705-44c1-4d92-a946-718c4a98e8b1" name="State" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b2f0acbc-b1fc-4ebd-a25f-aa3bd46ec3b5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="51858c0c-253c-49ad-ba5b-93d71100460a" LastKnownName="object" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="be2150fa-f990-4b89-9217-335089790282" name="GetState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ffee0599-7802-4ec9-8824-21c7cbd509f2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="624d665e-b1f2-4c33-959c-c912079f025d" direction="Return" isUnique="false">
+                  <elementDefinition Id="9973728f-7542-44b4-b3be-7aaac229abd9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="51858c0c-253c-49ad-ba5b-93d71100460a" LastKnownName="object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6e4ba9c3-8055-4277-86b1-dfa25a2bd59e" name="SetState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="feae7ce2-7682-4455-bd11-78d5857deca2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bf7fcb7a-aa4a-411e-a458-1250951f9f1e" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="999d62cb-db51-4521-8862-fd3234f62122" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3cc337b9-51d3-4469-b3d1-c4cb6eb5c7fe" name="Originator" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="babeb3ab-312a-4b95-8e06-c2fe7f01e0a0" />
+        <suppliersInternal>
+          <dependency Id="c7585473-f119-4b34-9c03-77acf7e652b4">
+            <classMoniker Id="1767c42a-1172-44f2-b65e-30a86ddcf870" LastKnownName="Memento" />
+            <elementDefinition Id="7897d941-d384-4a88-9910-56d68f2a124f" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="8bc9f404-867b-4a49-89e2-baaa32a03129" name="RestoreState" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3743bba2-4919-455e-918d-1a7c41b7a43b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c1a3db1a-4b2e-4bbb-8993-a8ca4bf514ce" name="memento" direction="In" isUnique="false">
+                  <elementDefinition Id="a901b03e-1013-4f02-b8f2-afcefeff6637" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b66e1f54-0474-494e-a2a9-798d5f719fee" LastKnownName="Memento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="074d4d8a-f074-4389-8b16-8e29a94450c9" name="SaveState" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="49eaa642-6728-4db4-b313-61954666c5c4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe83770b-7469-4a34-afa3-74539a40cebf" direction="Return">
+                  <elementDefinition Id="4c383ea2-995a-4b23-b291-34180f544585" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="66e1b3da-4826-41e3-b542-528c9b66d780" LastKnownName="Memento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b66e1f54-0474-494e-a2a9-798d5f719fee" name="Memento" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::Memento">
+        <elementDefinition Id="62e48151-94ad-47ba-b9c3-b5ff49acc4fa" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="827cac6a-e21b-4f02-a5dc-b91eea043772" name="GameState" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cb9f028e-da6b-4f05-ad8d-2097c3bd6b23" />
+        <ownedOperationsInternal>
+          <operation Id="cf964df9-e3da-410a-a7b5-0d6752daa6b1" name="Health:int" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55bc7fce-9a4a-4211-a58f-6c1263390890" />
+          </operation>
+          <operation Id="9c2137f9-a8b7-4c9c-94f4-6955d1095bff" name="Level:int" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c29e7fa3-1bc2-4d70-bb48-e55d3c6d624a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="51858c0c-253c-49ad-ba5b-93d71100460a" name="object" isAbstract="false" isLeaf="false" cachedFullName="object">
+        <elementDefinition Id="146c66ad-8141-487b-896e-b251fe19c307" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cae72877-cc01-42bb-8c24-a29bf8571810" name="Stack&lt;Memento&gt;" isAbstract="false" isLeaf="false" cachedFullName="Stack&lt;Memento&gt;">
+        <elementDefinition Id="9e128d42-b1e0-4344-8303-42e1b2f78acf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="66e1b3da-4826-41e3-b542-528c9b66d780" name="Memento" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::Memento">
+        <elementDefinition Id="62e48151-94ad-47ba-b9c3-b5ff49acc4fa" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="27ff2cd3-9a03-441b-8b80-3e0c46dcd5f8" name="GameMemento" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3d86bba3-d2f5-403b-8b6a-6a11a0d1bb73" />
+        <generalsInternal>
+          <generalization Id="dac38d11-f010-4b40-9857-8d0b9394fd67" isSubstitutable="false">
+            <classMoniker Id="1767c42a-1172-44f2-b65e-30a86ddcf870" LastKnownName="Memento" />
+            <elementDefinition Id="43e7446e-2c71-4aca-aef7-c2caf5b9317f" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="120218c2-6ab4-4f6a-8bc5-02b95e10db67" isDerived="false" sourceEndRoleName="GameMemento" targetEndRoleName="GameState" isLeaf="false" isAbstract="false">
+            <classMoniker Id="827cac6a-e21b-4f02-a5dc-b91eea043772" LastKnownName="GameState" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ba4bb4d5-2239-45aa-9ecf-f94669b4cc19" name="GameMemento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9e4edc10-2d9e-4275-9c92-6234687551fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2cc6f183-c7cb-484b-be65-9466b109ba0d" name="GameState" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b3938183-30be-41ad-b9af-357d71e6f3f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="613e5515-e9de-4793-a9aa-dee8a4026600" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="5e83805c-042e-4d1b-8d6b-905ef2194aea" name="GameMemento" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd4e86a5-47dd-48ce-88da-fff11dd2db36" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1020f889-acbd-48bf-9616-d337d6cc5c5c" name="state" direction="In" isUnique="false">
+                  <elementDefinition Id="8f60e472-6240-45a3-a1d4-87f4a90ee02d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0f097342-b218-4756-b0a9-aa7fe19103a5" LastKnownName="GameState" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="0f097342-b218-4756-b0a9-aa7fe19103a5" name="GameState" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::GameState">
+        <elementDefinition Id="cb9f028e-da6b-4f05-ad8d-2097c3bd6b23" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0e8bdb5a-8a27-4458-94a6-a5a4b4bba8f1" name="GameOriginator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c1e666c2-7027-4693-b2b2-af22b2f91e47" />
+        <suppliersInternal>
+          <dependency Id="661543a2-779c-4fa2-8056-2132b749221e">
+            <classMoniker Id="27ff2cd3-9a03-441b-8b80-3e0c46dcd5f8" LastKnownName="GameMemento" />
+            <elementDefinition Id="222abfd0-f713-439e-81c2-bab28b78d454" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="2e6529fc-b8a5-4d33-b409-2b971af8e8a4" isSubstitutable="false">
+            <classMoniker Id="3cc337b9-51d3-4469-b3d1-c4cb6eb5c7fe" LastKnownName="Originator" />
+            <elementDefinition Id="a7662d97-8bbc-47e7-9d41-6b94d41eeea0" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="e0ffe663-909a-4414-97fe-8c77c8f764f0" name="State" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0fffa886-e105-42cd-b1b5-ac189c7ca65e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0f097342-b218-4756-b0a9-aa7fe19103a5" LastKnownName="GameState" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="a2dd69d3-4143-4aef-bcbe-a578f5b8a334" name="FightWithEnemy" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b53bdf8-af35-4803-a701-f68deab3b444" />
+          </operation>
+          <operation Id="cc738643-f4c1-44cf-b296-63e2361e14bc" name="RestoreState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="520aa121-3188-4545-b093-f8ee8f7916d1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="194d7dc3-a0fa-4316-9f86-34db9d819253" name="memento" direction="In" isUnique="false">
+                  <elementDefinition Id="609c07dd-bd20-4812-b564-4dcab0deebf1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b66e1f54-0474-494e-a2a9-798d5f719fee" LastKnownName="Memento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f8bd00fb-0873-447c-a8b1-31c4db9e07fc" name="SaveState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c92a122e-8eda-4415-a8fa-5efc409f508e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="352d224a-9a2a-4a9a-9f7d-9ad3b525be7c" direction="Return">
+                  <elementDefinition Id="02739173-7c7d-4ce8-acef-d62dcf7c0356" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b66e1f54-0474-494e-a2a9-798d5f719fee" LastKnownName="Memento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="eb1de198-e2d3-4fbd-a578-68c91124a36a" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

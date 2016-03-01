@@ -57,6 +57,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\Mediator.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\Memento.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\Memento.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\Memento.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>

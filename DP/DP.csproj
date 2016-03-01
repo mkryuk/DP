@@ -70,6 +70,13 @@
     <Compile Include="Behavioral\Mediator\Colleague.cs" />
     <Compile Include="Behavioral\Mediator\SameGroupCommunicator.cs" />
     <Compile Include="Behavioral\Mediator\UsingMediator.cs" />
+    <Compile Include="Behavioral\Memento\Caretaker.cs" />
+    <Compile Include="Behavioral\Memento\GameOriginator.cs" />
+    <Compile Include="Behavioral\Memento\GameMemento.cs" />
+    <Compile Include="Behavioral\Memento\GameState.cs" />
+    <Compile Include="Behavioral\Memento\Memento.cs" />
+    <Compile Include="Behavioral\Memento\Originator.cs" />
+    <Compile Include="Behavioral\Memento\UsingMemento.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />
