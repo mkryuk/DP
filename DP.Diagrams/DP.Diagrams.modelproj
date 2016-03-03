@@ -64,6 +64,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\Memento.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\Observer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\Observer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\Observer.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>

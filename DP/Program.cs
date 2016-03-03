@@ -9,6 +9,7 @@ using DP.Behavioral.Interpreter;
 using DP.Behavioral.Iterator;
 using DP.Behavioral.Mediator;
 using DP.Behavioral.Memento;
+using DP.Behavioral.Observer;
 using DP.Creational.AbstractFactory;
 using DP.Creational.Builder;
 using DP.Creational.FactoryMethod;
@@ -50,7 +51,8 @@ namespace DP
             //UsingInterpreter.Run();
             //UsingIterator.Run();
             //UsingMediator.Run();
-            UsingMemento.Run();
+            //UsingMemento.Run();            
+            UsingObserver.Run();
         }
     }
 }
