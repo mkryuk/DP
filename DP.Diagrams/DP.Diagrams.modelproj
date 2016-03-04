@@ -71,6 +71,16 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\Observer.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\State.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\State.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\State.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Behavioral\State.statemachine.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -82,6 +92,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1433.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1555.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1948.uml">
