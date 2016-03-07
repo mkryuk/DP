@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d8271975-3b76-4afd-b442-66fefaedc1d2"
   name="DP.Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -6977,6 +6977,186 @@ etc ...</body>
         Id="0edaef06-8104-4bb6-99cd-610da0da8f63"
         LastKnownName="Client"
         LastKnownLocation="Package_1555.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8ff9f431-c30a-42fa-ae83-2a2b8e359c52"
+        name="IStrategy"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="3b5444d5-06ac-4fdc-8b3b-9d985d189063"
+            name="ImplementStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1fa92a76-ec51-4d58-9427-9ea74362ceb3"
+        name="RunAwayStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="b2e21979-a9c1-4d28-accf-100b1066d807">
+            <interfaceMoniker
+              Id="8ff9f431-c30a-42fa-ae83-2a2b8e359c52"
+              LastKnownName="IStrategy"
+              LastKnownLocation="DP.Diagrams.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="37c69393-fef4-4a91-90bd-99fb685d5451"
+            name="ImplementStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1a6d919d-cae1-444c-a479-cf463b57c2fa"
+        name="FightToDeathStrategy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f1182d23-7186-4293-a98a-02ebfea37165">
+            <interfaceMoniker
+              Id="8ff9f431-c30a-42fa-ae83-2a2b8e359c52"
+              LastKnownName="IStrategy"
+              LastKnownLocation="DP.Diagrams.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="324991d6-4786-4a96-9ced-8f6e3d5f95c4"
+            name="ImplementStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a3ebfd30-2bfb-4c6e-8be9-1da616a2f9ae"
+        name="Achilles"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ac026a14-e617-4b56-8041-44c2b3dd6b39"
+            isDerived="false"
+            sourceEndRoleName="Achilles"
+            targetEndRoleName="IStrategy"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="8ff9f431-c30a-42fa-ae83-2a2b8e359c52"
+              LastKnownName="IStrategy"
+              LastKnownLocation="DP.Diagrams.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="144071b0-ef47-4648-a1f2-854440fefad9"
+                  name="Achilles"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="95a4084d-0ec1-420d-8908-42e026c8faeb"
+                  name="IStrategy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="cfb74d7f-201a-4616-aa31-0679090d7ae2"
+            name="Strategy"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8ff9f431-c30a-42fa-ae83-2a2b8e359c52"
+                LastKnownName="IStrategy"
+                LastKnownLocation="DP.Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0a7a715c-e641-4e04-b38a-56cef4396c15"
+            name="SetStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="417a6166-036a-48f5-9f4f-dfce48df3b03"
+                  name="strategy"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="8ff9f431-c30a-42fa-ae83-2a2b8e359c52"
+                      LastKnownName="IStrategy"
+                      LastKnownLocation="DP.Diagrams.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f03efbd5-ff98-47e5-866e-eb76384178a9"
+            name="StartBattle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

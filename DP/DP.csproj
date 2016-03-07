@@ -92,6 +92,11 @@
     <Compile Include="Behavioral\State\Created.cs" />
     <Compile Include="Behavioral\State\Solved.cs" />
     <Compile Include="Behavioral\State\UsingState.cs" />
+    <Compile Include="Behavioral\Strategy\Achilles.cs" />
+    <Compile Include="Behavioral\Strategy\FightToDeathStrategy.cs" />
+    <Compile Include="Behavioral\Strategy\IStrategy.cs" />
+    <Compile Include="Behavioral\Strategy\RunAwayStrategy.cs" />
+    <Compile Include="Behavioral\Strategy\UsingStrategy.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />

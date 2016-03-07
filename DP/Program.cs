@@ -11,6 +11,7 @@ using DP.Behavioral.Mediator;
 using DP.Behavioral.Memento;
 using DP.Behavioral.Observer;
 using DP.Behavioral.State;
+using DP.Behavioral.Strategy;
 using DP.Creational.AbstractFactory;
 using DP.Creational.Builder;
 using DP.Creational.FactoryMethod;
@@ -54,7 +55,8 @@ namespace DP
             //UsingMediator.Run();
             //UsingMemento.Run();            
             //UsingObserver.Run();
-            UsingState.Run();
+            //UsingState.Run();
+            UsingStrategy.Run();
         }
     }
 }
