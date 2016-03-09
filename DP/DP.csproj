@@ -97,6 +97,10 @@
     <Compile Include="Behavioral\Strategy\IStrategy.cs" />
     <Compile Include="Behavioral\Strategy\RunAwayStrategy.cs" />
     <Compile Include="Behavioral\Strategy\UsingStrategy.cs" />
+    <Compile Include="Behavioral\TemplateMethod\HtmlMessageFormatter.cs" />
+    <Compile Include="Behavioral\TemplateMethod\JsonMessageFormatter.cs" />
+    <Compile Include="Behavioral\TemplateMethod\MessageFormatter.cs" />
+    <Compile Include="Behavioral\TemplateMethod\UsingTemplateMethod.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />

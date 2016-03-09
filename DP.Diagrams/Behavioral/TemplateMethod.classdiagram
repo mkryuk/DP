@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="04d7eae4-114c-4492-9e8d-eeb266596f90" name="TemplateMethod" linkedPackageId="50f114f1-7f3e-48ed-920b-99cc793e6fb7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="9ec0dff5-3e8c-4323-95ba-4c0cd93b1faa">
+      <elementDefinition Id="de6dcd4d-2002-401e-affc-35cce34bc371" />
+      <body>Get result - template method
+AllOk and Format redefined in derived classes</body>
+      <annotatedElements>
+        <classMoniker Id="1438aeae-88ab-422a-af3a-92479fb2370b" LastKnownName="MessageFormatter" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f65a85e0-849c-497d-8c7b-68924dbbc0dc">
+      <profileInstance Id="0ce56219-f70e-41db-ba89-d09f5b59ce87" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="078dd666-5d02-4b08-971a-fb0a24bd16ac">
+      <profileInstance Id="20abf4a8-e974-41e4-90a2-8be4d2abe940" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1438aeae-88ab-422a-af3a-92479fb2370b" name="MessageFormatter" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e8390e93-fd83-4aea-82fd-8456dfa0eb23" />
+        <ownedAttributesInternal>
+          <property Id="180a7a4a-7a4f-4b83-b336-1155a240ab00" name="From" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9e744604-90f4-4e59-90cd-b691b83de304" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="24922cd6-a3f7-4b47-ae31-fc45d8681028" name="To" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2567e285-69ff-4ff0-a8d7-8218b0ac0779" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="39993f87-ca61-431e-a38a-f93184f34631" name="Title" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7789de4d-5a2d-4d70-8ece-9b08613fc113" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="4f1e52af-6c4f-40fb-aba9-95b096297c9c" name="Message" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="339242c0-d8f7-4417-8c18-be402e084a77" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="5261282b-295e-424a-bfea-c24b28401297" name="Format" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ec975fff-904e-45a3-b373-8318ffc02dfe" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8487a77c-a1a7-42ea-9df0-3901e9b9ce55" direction="Return" isUnique="false">
+                  <elementDefinition Id="d0dece9b-f9a7-4b47-aaf6-499f1b5893ce" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e7625be6-f13c-487d-ade3-99dc0d66a073" name="AllOk" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ce468a1e-aa19-4496-b63e-29e163036b5e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e2af3a8e-7532-4f31-a266-84179d9953aa" direction="Return" isUnique="false">
+                  <elementDefinition Id="22bec758-c686-459d-b045-a7c8ae3619c4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="eda3e138-825d-493a-803b-76b38bbdc8af" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0673bab3-cb51-454f-9b1e-9827ec6c4494" name="GetResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9409d0a7-48e1-4981-9db7-d9150e1f00c1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e939c057-b1ee-42e1-aac9-a431b9b4c667" direction="Return" isUnique="false">
+                  <elementDefinition Id="acdcd1cd-a12e-4161-80a2-4435c5a29dd7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="eda3e138-825d-493a-803b-76b38bbdc8af" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="9bebf0e3-8ec7-49f5-a0cd-4dd60e051770" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cb3ef695-78cc-4014-8be2-833f2a2e095b" name="JsonMessageFormatter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3f6ecc29-faee-43cb-8d48-c87939dfa3f4" />
+        <generalsInternal>
+          <generalization Id="4052adaf-06bb-42c8-8181-16d01fdf2ba5" isSubstitutable="false">
+            <classMoniker Id="1438aeae-88ab-422a-af3a-92479fb2370b" LastKnownName="MessageFormatter" />
+            <elementDefinition Id="04fa4408-e275-4ec0-a138-5819af343eb8" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="a611e0b2-4a67-4274-99e4-7c816f205bba" name="Format" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3c11670a-d614-4d11-8eeb-f07600e14685" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="80672d49-a789-41f0-87b7-39097f873cd7" direction="Return" isUnique="false">
+                  <elementDefinition Id="46ccc8c7-86ee-4756-952f-c887dccd90bf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c56a97e6-4cd8-439f-a39e-166d946ae10a" name="AllOk" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="144e02e8-d3ba-4b6a-a604-bc71467dc355" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="04ed446a-d637-46f0-b265-677c67fbbe01" direction="Return" isUnique="false">
+                  <elementDefinition Id="37f02959-285c-48cf-9e7d-94abc4055b2b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="eda3e138-825d-493a-803b-76b38bbdc8af" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7ee98b3e-b243-4df7-8ee2-eeb8d9b2f20d" name="HtmlMessageFormatter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f4163143-2973-48d2-843a-4c14f366c405" />
+        <generalsInternal>
+          <generalization Id="e2753c8e-bca4-4737-b73e-7d4c040ef67c" isSubstitutable="false">
+            <classMoniker Id="1438aeae-88ab-422a-af3a-92479fb2370b" LastKnownName="MessageFormatter" />
+            <elementDefinition Id="5803ee9e-2ad0-43bb-8f52-7e8eb14b3f76" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="914d4036-d48f-4c50-8307-b5b8445635a9" name="Format" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="896eed20-098b-4be2-abbd-1f04bf581e13" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc5cfeaf-6c05-40c0-94d2-68f23e83aedb" direction="Return" isUnique="false">
+                  <elementDefinition Id="fc7b2400-3655-49cd-9c08-aa662963cf30" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b58e9515-f7eb-4140-9b19-de5a27a2c81c" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="406428d6-0668-439b-a8fb-0d96415fda95" name="AllOk" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c1d862d3-f204-41c3-9605-0505c76edbd0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d8ccfdb7-be30-4644-925c-cbb6c4da0efb" direction="Return" isUnique="false">
+                  <elementDefinition Id="c1214493-5a52-429a-98b4-ced90d9c7ca3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="eda3e138-825d-493a-803b-76b38bbdc8af" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="50f114f1-7f3e-48ed-920b-99cc793e6fb7" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>
