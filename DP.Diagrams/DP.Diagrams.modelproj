@@ -95,6 +95,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Behavioral\TemplateMethod.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Behavioral\Visitor.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Behavioral\Visitor.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Behavioral\Visitor.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Creational\Singleton.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -112,6 +119,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1630.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1739.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1948.uml">

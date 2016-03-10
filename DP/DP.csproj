@@ -101,6 +101,13 @@
     <Compile Include="Behavioral\TemplateMethod\JsonMessageFormatter.cs" />
     <Compile Include="Behavioral\TemplateMethod\MessageFormatter.cs" />
     <Compile Include="Behavioral\TemplateMethod\UsingTemplateMethod.cs" />
+    <Compile Include="Behavioral\Visitor\Cafe.cs" />
+    <Compile Include="Behavioral\Visitor\Guest.cs" />
+    <Compile Include="Behavioral\Visitor\IAcceptor.cs" />
+    <Compile Include="Behavioral\Visitor\Inspector.cs" />
+    <Compile Include="Behavioral\Visitor\IVisitor.cs" />
+    <Compile Include="Behavioral\Visitor\Room.cs" />
+    <Compile Include="Behavioral\Visitor\UsingVisitor.cs" />
     <Compile Include="Creational\AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="Creational\AbstractFactory\IProduct.cs" />
     <Compile Include="Creational\AbstractFactory\SteelCar.cs" />

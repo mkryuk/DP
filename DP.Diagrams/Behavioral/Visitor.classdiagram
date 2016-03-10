@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a45ded41-1577-46fe-bca3-fda084b8e3d7" name="Visitor" linkedPackageId="25661fdd-b267-4581-8e70-576142b9e068" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="e62688e6-c886-4170-b8a7-ea015220efe3">
+      <elementDefinition Id="09a1a279-320e-4e08-8b57-c1cd36da9856" />
+      <body>Accept(visitor) calls visitor.Visit(this) 
+for item in Rooms calls visitor.Visit(item)</body>
+      <annotatedElements>
+        <classMoniker Id="7e056287-697d-4a99-943d-7dfb26eeadb7" LastKnownName="Cafe" />
+      </annotatedElements>
+    </comment>
+    <comment Id="0b03f2d8-e0ac-460c-968c-4a2cdd1a5c18">
+      <elementDefinition Id="4ed3b354-e0f8-42d1-bb8e-3e6d1c797da2" />
+      <body>Accept(visitor) calls visitor.Visit(this)</body>
+      <annotatedElements>
+        <classMoniker Id="bc7d7435-7641-4560-b1ba-ef46b34bad06" LastKnownName="Room" />
+      </annotatedElements>
+    </comment>
+    <comment Id="98f271ec-c6e0-4b88-aa41-827486d2eefe">
+      <elementDefinition Id="133ee8dc-8adf-4aee-98ba-70bfcd49015b" />
+      <body>Visit(acceptor:Cafe) implements concrete algorithm of visiting Cafe
+Visit(acceptor:Room) implements concrete algorithm of visiting Room</body>
+      <annotatedElements>
+        <classMoniker Id="1fbd7ed9-a03a-41f1-9842-3333e4bfe10c" LastKnownName="Inspector" />
+        <classMoniker Id="c95f218b-476a-466e-aeba-9e521db2e8a5" LastKnownName="Guest" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="7ccb03a7-c624-4197-a1e3-bf6421b178e4">
+      <profileInstance Id="7a10ade3-dc9d-4fb5-8968-8c6aa4a86b03" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="114ca14c-7cf1-44ea-b656-c00933583410">
+      <profileInstance Id="be9aae35-387c-4c2c-a97e-893ca29c8d6e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="541c2202-a762-47ca-b937-baa4a4e1fdfe" name="IVisitor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5cb6163d-a8c0-44bd-a5c6-dd98953d620d" />
+        <ownedOperations>
+          <operation Id="0f058533-706a-4bf1-ae20-e361f45b9b14" name="Visit" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9fedcb7a-7892-4882-bc69-b0f748b0b50c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="60b000ec-a9e1-401b-9b48-f0db3afa97c1" name="acceptor" direction="In" isUnique="false">
+                  <elementDefinition Id="a0437edb-a1c6-4445-8fa2-9085022e0f07" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8b671d6b-57a9-4cd4-9481-89b3c20287b7" LastKnownName="Cafe" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c39a5085-8395-4bff-b3fc-5401c98284dc" name="Visit" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d583145e-9166-494a-aa43-30e2ff2f5a20" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c21a5655-9a27-4b28-8336-791ad35e8d23" name="acceptor" direction="In" isUnique="false">
+                  <elementDefinition Id="7d644da0-2407-479b-9cdc-9bc1170c013b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0f939ee1-c21b-49ba-b5d6-8af42869f38b" LastKnownName="Room" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="ecda29f1-5982-4517-9c34-ce10f0a15a65" name="IAcceptor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb8ec918-36ea-45c7-965c-6c5a5e05f481" />
+        <ownedOperations>
+          <operation Id="4cd2be5d-6ab1-4f4e-88f1-797b309cce2e" name="Accept" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c0ef0f85-4064-427b-9157-9f250d570edd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5b1e2ca7-3d49-4ea3-8842-b17a353ec909" name="visitor" direction="In" isUnique="false">
+                  <elementDefinition Id="0a77fd24-600d-48e8-a903-4e931045870b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f56825e5-622f-4425-aa7c-ed6f8871b05f" LastKnownName="IVisitor" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c95f218b-476a-466e-aeba-9e521db2e8a5" name="Guest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="588296ca-a42c-4ed0-867b-49e573d6f056" />
+        <suppliersInternal>
+          <interfaceRealization Id="bc3dafd9-35c3-4a20-82d0-f132bebefdc2">
+            <interfaceMoniker Id="541c2202-a762-47ca-b937-baa4a4e1fdfe" LastKnownName="IVisitor" />
+            <elementDefinition Id="130603e2-7c6c-4dd6-936c-ed195c66a7c1" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="45d03850-5353-4b0c-8805-5a1085fa9393" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="30ae2dbf-773d-471c-867e-a8ad8575ac86" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="efaa20bc-9d87-4512-bc3f-c6169dad6527" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f97a367f-0fb5-4a03-91be-abf847c48148" name="Visit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b87f397a-97f3-4b5b-b2f7-99adb52604d8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cdaed4ab-213a-42bf-8315-37bf2292b1da" name="acceptor" direction="In" isUnique="false">
+                  <elementDefinition Id="13150271-537d-4883-a2b6-1c4d10891b08" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8b671d6b-57a9-4cd4-9481-89b3c20287b7" LastKnownName="Cafe" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="82b9266f-e594-4fb5-ac69-0589962b3ca7" name="Visit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5234be15-368e-4c8d-b6ca-c2f109283fe6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2ae34901-2ec9-4f4e-ba70-88b402b8009c" name="acceptor" direction="In" isUnique="false">
+                  <elementDefinition Id="b44ada2e-b556-4cf0-879e-a463dd73080c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0f939ee1-c21b-49ba-b5d6-8af42869f38b" LastKnownName="Room" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="efaa20bc-9d87-4512-bc3f-c6169dad6527" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="0f1298ff-c042-4f51-a8c6-c491841a1583" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7e056287-697d-4a99-943d-7dfb26eeadb7" name="Cafe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bd6ee79e-84b6-456a-ac1d-1bc4c4482edc" />
+        <suppliersInternal>
+          <interfaceRealization Id="b01c8995-6e83-4900-9e10-96f6aaa646ee">
+            <interfaceMoniker Id="ecda29f1-5982-4517-9c34-ce10f0a15a65" LastKnownName="IAcceptor" />
+            <elementDefinition Id="dd3067eb-1b73-46ce-b68f-1ccdd5a4dbf3" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="a451974b-2e7e-47fb-b254-512e4d14d854" isDerived="false" sourceEndRoleName="Cafe" targetEndRoleName="Room" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bc7d7435-7641-4560-b1ba-ef46b34bad06" LastKnownName="Room" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="87cbf65c-4788-4556-b926-a0ae735d0dcd" name="Cafe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e8ff978f-0e67-4d75-9f8b-f70564883f7a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="03f621a2-e2bf-4ea9-8a89-0a099175e9ab" name="Room" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="eba798fb-957c-4de8-a28d-3ccebcbb0828" name="Lower" value="*">
+                      <elementDefinition Id="f8f126bc-51a8-46bf-8d6f-8fc1a20a1c72" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4b37e59e-a401-4308-83e6-efa4d015343d" name="Upper" value="*">
+                      <elementDefinition Id="b44bcbe2-a8f9-4be2-87dc-84fad1abf9ad" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2fe4c6c2-3077-41ff-abf5-2c6d5b53ab19" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7c03afac-05d0-4867-b636-9e1f335821b0" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="3c86e0cd-264a-470f-8d9c-4dcc32136f99" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0f16786c-a3ba-4248-a601-8fa6669a6441" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="efaa20bc-9d87-4512-bc3f-c6169dad6527" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="95b30039-b9de-408b-b3b9-491dc0f27547" name="Rooms" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5618e15d-4ca5-470b-9b17-17650863a9fb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bd2ea9db-b3ea-428f-ac7c-553f8c167f65" LastKnownName="List&lt;Room&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="464a991f-b5c6-401f-bb9b-4b9a5c7c20f4" name="Accept" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d84b222-b1f8-446c-befe-d213d2a01f13" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6e0677df-5496-4d43-938b-644f2edcdf62" name="Inspector" direction="In" isUnique="false">
+                  <elementDefinition Id="d6d9c42c-8759-41f4-a7c3-ba698143d64c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f56825e5-622f-4425-aa7c-ed6f8871b05f" LastKnownName="IVisitor" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="bd2ea9db-b3ea-428f-ac7c-553f8c167f65" name="List&lt;Room&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Room&gt;">
+        <elementDefinition Id="b87450ab-7544-48df-958a-6a5c963795ac" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1fbd7ed9-a03a-41f1-9842-3333e4bfe10c" name="Inspector" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e23a3d6d-87ee-439a-b0e5-b588843423fa" />
+        <suppliersInternal>
+          <interfaceRealization Id="fc0921b0-aa32-4a4a-9018-e17dfd8fe82a">
+            <interfaceMoniker Id="541c2202-a762-47ca-b937-baa4a4e1fdfe" LastKnownName="IVisitor" />
+            <elementDefinition Id="2981801b-82a3-4d36-8153-365f52eb8d18" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="5036d9c1-b08a-4040-ae92-28dc6e5c3a40" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f64c888a-491c-46ea-8441-36fc84e86bf4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="efaa20bc-9d87-4512-bc3f-c6169dad6527" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="aecc2127-f800-4734-95cf-0c979a77a9f9" name="Visit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4e720cd4-959d-4169-9e5e-a2ffaac41695" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a1e71acb-1290-49cf-bf29-4aff3b5679f5" name="acceptor" direction="In" isUnique="false">
+                  <elementDefinition Id="f95d70ec-fe8b-45cf-a815-513c33302ed5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8b671d6b-57a9-4cd4-9481-89b3c20287b7" LastKnownName="Cafe" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8baa0707-c9cd-4f64-9f35-7afddeb50635" name="Visit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cbe5fb10-78d4-43ee-b628-98401ab15f98" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8f77b69e-4047-4fcc-a599-0b9897cfe987" name="acceptor" direction="In" isUnique="false">
+                  <elementDefinition Id="298ede58-3e02-4811-a7c8-9828def28683" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0f939ee1-c21b-49ba-b5d6-8af42869f38b" LastKnownName="Room" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bc7d7435-7641-4560-b1ba-ef46b34bad06" name="Room" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="315e22f6-7d4e-46e7-b74f-4988d25fe6de" />
+        <suppliersInternal>
+          <interfaceRealization Id="087b8317-13d8-4554-9291-00766e15601b">
+            <interfaceMoniker Id="ecda29f1-5982-4517-9c34-ce10f0a15a65" LastKnownName="IAcceptor" />
+            <elementDefinition Id="12f5caf1-edd6-4bdd-9d75-677a1150e159" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="e4251f66-37cb-47b5-930d-f98fedf047b8" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f226a157-6738-45c5-892d-9feeb38407a9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="efaa20bc-9d87-4512-bc3f-c6169dad6527" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="e117a030-5795-43db-9e9f-a34281310039" name="Seats" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="938d11df-abc4-491e-9613-ccdef18d786b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9626fd51-a87c-450d-8375-a3ecebc5fd26" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="103dd3c3-869b-4a96-904c-60dabc980d44" name="SeatsLeft" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d44c048-2d01-4670-a414-a61f10c980f8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9626fd51-a87c-450d-8375-a3ecebc5fd26" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="e0fc9875-7ce8-4c62-b2fe-015c6e261972" name="_seats" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3373b204-dccd-4d96-8bb5-4bae9dc17ad7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9626fd51-a87c-450d-8375-a3ecebc5fd26" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="937dfb40-add1-41a1-be64-cf1e22b2fbfb" name="Accept" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4264d869-f0da-4ac9-93c4-1cb7195224dc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b4e8df35-6f66-42fb-98da-7c2ce43b1c45" name="Inspector" direction="In" isUnique="false">
+                  <elementDefinition Id="a0877471-5e76-4233-be8f-855083c8ae73" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f56825e5-622f-4425-aa7c-ed6f8871b05f" LastKnownName="IVisitor" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9626fd51-a87c-450d-8375-a3ecebc5fd26" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="998afc2c-7e7c-4c9e-b509-5556875f923c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0f939ee1-c21b-49ba-b5d6-8af42869f38b" name="Room" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::Room">
+        <elementDefinition Id="315e22f6-7d4e-46e7-b74f-4988d25fe6de" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8b671d6b-57a9-4cd4-9481-89b3c20287b7" name="Cafe" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::Cafe">
+        <elementDefinition Id="bd6ee79e-84b6-456a-ac1d-1bc4c4482edc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f56825e5-622f-4425-aa7c-ed6f8871b05f" name="IVisitor" isAbstract="false" isLeaf="false" cachedFullName="DP.Diagrams::IVisitor">
+        <elementDefinition Id="5cb6163d-a8c0-44bd-a5c6-dd98953d620d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="abb16ef6-792a-4521-acd6-7a4be03e1592" name="Client">
+        <elementDefinition Id="23cf1e60-b77e-46e2-9b65-b3cf2414fa83" />
+        <suppliersInternal>
+          <dependency Id="f9c6915a-b1ba-473d-bb76-a2e17a7c6581">
+            <interfaceMoniker Id="ecda29f1-5982-4517-9c34-ce10f0a15a65" LastKnownName="IAcceptor" />
+            <elementDefinition Id="2d537236-ce39-4ff9-a593-a0d613f00f11" />
+          </dependency>
+          <dependency Id="b3d37ca0-56a5-4135-9ed7-887e5c2a66fe">
+            <interfaceMoniker Id="541c2202-a762-47ca-b937-baa4a4e1fdfe" LastKnownName="IVisitor" />
+            <elementDefinition Id="b2e1a138-1c66-4121-bfd8-cf32019d6bcf" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="25661fdd-b267-4581-8e70-576142b9e068" name="DP.Diagrams">
+    <elementDefinition Id="d8271975-3b76-4afd-b442-66fefaedc1d2" />
+  </package>
+</logicalClassDesignerModel>

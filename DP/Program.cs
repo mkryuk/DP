@@ -13,6 +13,7 @@ using DP.Behavioral.Observer;
 using DP.Behavioral.State;
 using DP.Behavioral.Strategy;
 using DP.Behavioral.TemplateMethod;
+using DP.Behavioral.Visitor;
 using DP.Creational.AbstractFactory;
 using DP.Creational.Builder;
 using DP.Creational.FactoryMethod;
@@ -58,7 +59,8 @@ namespace DP
             //UsingObserver.Run();
             //UsingState.Run();
             //UsingStrategy.Run();
-            UsingTemplateMethod.Run();
+            //UsingTemplateMethod.Run();
+            UsingVisitor.Run();
         }
     }
 }

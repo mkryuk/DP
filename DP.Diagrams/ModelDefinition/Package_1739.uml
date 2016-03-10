@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="23cf1e60-b77e-46e2-9b65-b3cf2414fa83"
+  name="Client" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="2d537236-ce39-4ff9-a593-a0d613f00f11">
+      <interfaceMoniker
+        Id="cb8ec918-36ea-45c7-965c-6c5a5e05f481"
+        LastKnownName="IAcceptor"
+        LastKnownLocation="DP.Diagrams.uml" />
+    </dependency>
+    <dependency
+      Id="b2e1a138-1c66-4121-bfd8-cf32019d6bcf">
+      <interfaceMoniker
+        Id="5cb6163d-a8c0-44bd-a5c6-dd98953d620d"
+        LastKnownName="IVisitor"
+        LastKnownLocation="DP.Diagrams.uml" />
+    </dependency>
+  </suppliersInternal>
+</package>
